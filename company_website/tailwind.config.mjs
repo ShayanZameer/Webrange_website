@@ -11,6 +11,8 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
         lightblue: "#F9FAFF",
+        navcolor: "#222222BF",
+        navhover: "#D9D9D91A",
       },
       backgroundImage: {
         "gradient-custom":

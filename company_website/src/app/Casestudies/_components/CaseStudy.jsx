@@ -2,18 +2,40 @@ import Image from "next/image";
 import IMAGES from "@/constants/images";
 import Ticon from "./Ticon";
 import Platform from "./Platform";
+import { FaArrowRight } from "react-icons/fa";
 
 const CaseStudy = () => {
   return (
     <section className="py-6 px-4 lg:py-6 lg:px-20">
-      <div className="w-full">
+      {/* <div className="w-full relative group">
         <Image
           src={IMAGES.casestudy}
           alt="Project"
           width={1300}
           height={400}
-          className="w-full h-auto mx-auto object-cover"
+          className="w-full h-auto mx-auto object-cover rounded-none transition-transform duration-300
+                 hover:scale-75 hover:translate-x-1 hover:translate-y-1 hover:rounded-lg"
         />
+        <button className="absolute bottom-4 right-4 transform translate-y-2 bg-black text-white px-4 py-3 text-sm font-semibold rounded-full transition-all duration-200 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 flex items-center justify-center gap-2">
+          <span className="font-jakarta text-xs">Read More</span>
+          <FaArrowRight size={16} />
+        </button>
+      </div> */}
+
+      <div className="w-full relative group">
+        <div className=" ">
+          <Image
+            src={IMAGES.casestudy}
+            alt="Project"
+            width={1300}
+            height={400}
+            className="w-full h-auto mx-auto object-cover rounded-none transition-transform duration-300 group-hover:scale-101 group-hover:translate-x-0 group-hover:translate-y-1 hover:rounded-lg"
+          />
+        </div>
+        <button className="absolute bottom-4 right-4 transform translate-y-2 bg-black text-white px-4 py-3 text-sm font-semibold rounded-full transition-all duration-200 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 flex items-center justify-center gap-2">
+          <span className="font-jakarta text-xs">Read More</span>
+          <FaArrowRight size={16} />
+        </button>
       </div>
 
       <div className="flex flex-col lg:flex-row items-start justify-evenly space-y-8 lg:space-y-0 mt-8">
@@ -38,7 +60,7 @@ const CaseStudy = () => {
         </div>
 
         <div className="lg:w-1/3 w-full ml-4">
-          <h2 className="text-lg lg:text-xl  font-semibold mb-2 font-jakarta">
+          <h2 className="text-lg lg:text-xl font-semibold mb-2 font-jakarta">
             Technologies Used
           </h2>
           <div className="flex flex-wrap items-center gap-4 lg:gap-6">

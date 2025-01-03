@@ -5,6 +5,7 @@ const IMAGES = {
     dart: "/Images/icons/Dart.png",
     c: "/Images/icons/C.png",
     handshake: "/Images/icons/Handshake.png",
+    logo: "/Images/logo/logo.png",
   },
 };
 

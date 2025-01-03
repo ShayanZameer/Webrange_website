@@ -6,7 +6,6 @@ import Image from "next/image";
 export const FooterSection = () => {
   return (
     <footer className="bg-lightblue h-[400px] flex flex-col justify-between">
-      {/* Centered Section */}
       <div className="flex flex-col sm:flex-row items-center justify-center flex-grow text-center px-4 sm:px-8">
         <p className=" cursor-pointer font-jakarta font-bold text-2xl sm:text-4xl underline-offset-2 underline">
           Let's start a discussion
@@ -20,9 +19,7 @@ export const FooterSection = () => {
         />
       </div>
 
-      {/* Bottom Bar */}
       <div className="flex flex-col sm:flex-row justify-between items-center px-4 sm:px-6 lg:px-20 py-4 space-y-4 sm:space-y-0">
-        {/* Left: Social Icons */}
         <div className="flex items-center space-x-4">
           <a
             href="#"
