@@ -1,9 +1,9 @@
+"use client";
 import { FaArrowRight } from "react-icons/fa";
 import Image from "next/image";
 import Link from "next/link";
 import IMAGES from "@/constants/images";
-
-// Reusable NavLink Component
+import { useRouter } from "next/navigation";
 const NavLink = ({ href, children }) => {
   return (
     <li>
@@ -18,6 +18,11 @@ const NavLink = ({ href, children }) => {
 };
 
 const Navbar = () => {
+  const router = useRouter();
+  const handleNavigate = () => {
+    router.push("/contactus");
+  };
+
   return (
     <nav className="flex items-center bg-navcolor text-white px-16 py-4 rounded-full">
       {/* Logo Section */}
@@ -37,12 +42,15 @@ const Navbar = () => {
           <NavLink href="/Casestudies">Case Studies</NavLink>
           <NavLink href="/industries">Industries</NavLink>
           <NavLink href="/insights">Insights</NavLink>
-          <NavLink href="/about">About</NavLink>
+          <NavLink href="/About">About</NavLink>
         </ul>
       </div>
 
       <div className="flex-none flex justify-end ml-3">
-        <button className="w-32 flex items-center gap-2 bg-white text-gray-800 px-5 py-3 text-sm font-semibold rounded-full hover:bg-gray-200 transition duration-200">
+        <button
+          onClick={handleNavigate}
+          className="w-32 flex items-center gap-2 bg-white text-gray-800 px-5 py-3 text-sm font-semibold rounded-full hover:bg-gray-200 transition duration-200"
+        >
           <span>Let’s talk</span>
           <FaArrowRight size={16} />
         </button>

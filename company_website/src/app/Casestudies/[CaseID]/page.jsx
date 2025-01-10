@@ -9,6 +9,7 @@ import ProblemSection from "./_components/ProblemSection";
 import Ticon from "../_components/Ticon";
 import CaseStudy from "../_components/CaseStudy";
 import FooterSection from "../_components/FooterSection";
+import CloseButton from "@/components/Button/CloseButton";
 
 const CaseStudyDetails = () => {
   //   const { CaseID } = useParams();
@@ -16,15 +17,12 @@ const CaseStudyDetails = () => {
   return (
     <div className="py-6 px-4 lg:py-10 lg:px-20">
       <div className="flex justify-end">
-        <button
-          className="bg-navcolor text-white rounded-full p-2 flex items-center justify-center hover:bg-gray-800 transition duration-200"
-          aria-label="Close"
-        >
-          <FaTimes size={16} />
-        </button>
+        <CloseButton
+          onClick={() => {
+            console.log("back button is pressed");
+          }}
+        />
       </div>
-
-      {/* heading */}
 
       <div>
         <p className="pt-4 text-center bg-gradient-custom text-transparent bg-clip-text font-jakarta font-medium text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl">

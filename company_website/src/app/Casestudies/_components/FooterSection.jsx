@@ -1,13 +1,22 @@
-import React from "react";
-import { FaFacebookF, FaLinkedinIn, FaInstagram } from "react-icons/fa";
+"use client";
 import IMAGES from "@/constants/images";
 import Image from "next/image";
-
+import SocialLink from "@/components/SocialLink/SocialLink";
+import { socialLinks } from "@/utils/SocialLinksData/SocialLinks";
+import { useRouter } from "next/navigation";
 export const FooterSection = () => {
+  const router = useRouter();
+  const handleNavigate = () => {
+    router.push("/contactus");
+  };
+
   return (
     <footer className="bg-lightblue h-[400px] flex flex-col justify-between">
       <div className="flex flex-col sm:flex-row items-center justify-center flex-grow text-center px-4 sm:px-8">
-        <p className=" cursor-pointer font-jakarta font-bold text-2xl sm:text-4xl underline-offset-2 underline">
+        <p
+          onClick={handleNavigate}
+          className=" cursor-pointer font-jakarta font-bold text-2xl sm:text-4xl underline-offset-2 underline"
+        >
           Let's start a discussion
         </p>
         <Image
@@ -21,27 +30,11 @@ export const FooterSection = () => {
 
       <div className="flex flex-col sm:flex-row justify-between items-center px-4 sm:px-6 lg:px-20 py-4 space-y-4 sm:space-y-0">
         <div className="flex items-center space-x-4">
-          <a
-            href="#"
-            className="text-black hover:text-gray-900 transition duration-200"
-          >
-            <FaFacebookF size={20} />
-          </a>
-          <a
-            href="#"
-            className="text-black hover:text-gray-900 transition duration-200"
-          >
-            <FaLinkedinIn size={20} />
-          </a>
-          <a
-            href="#"
-            className="text-black hover:text-gray-900 transition duration-200"
-          >
-            <FaInstagram size={20} />
-          </a>
+          {socialLinks.map((link, index) => (
+            <SocialLink key={index} icon={link.icon} href={link.href} />
+          ))}
         </div>
 
-        {/* Right: Copyright */}
         <div>
           <p className="font-jakarta text-[#202124] text-sm text-center sm:text-right">
             © Copyright 2024

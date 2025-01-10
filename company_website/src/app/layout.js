@@ -54,9 +54,9 @@ export default function RootLayout({ children }) {
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <main>{children}</main>
-        {/* <div className="fixed bottom-10 left-1/2 transform -translate-x-1/2 z-50">
+        <div className="fixed bottom-10 left-1/2 transform -translate-x-1/2 z-50">
           <Navbar />
-        </div> */}
+        </div>
       </body>
     </html>
   );

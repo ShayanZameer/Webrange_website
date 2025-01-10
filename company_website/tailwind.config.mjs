@@ -11,6 +11,7 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
         lightblue: "#F9FAFF",
+        greyColour: "#5F6368",
         navcolor: "#222222BF",
         navhover: "#D9D9D91A",
         borderColour: "#00000066",
