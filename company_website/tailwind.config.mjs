@@ -13,6 +13,7 @@ export default {
         lightblue: "#F9FAFF",
         navcolor: "#222222BF",
         navhover: "#D9D9D91A",
+        borderColour: "#00000066",
       },
       backgroundImage: {
         "gradient-custom":

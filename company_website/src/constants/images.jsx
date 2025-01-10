@@ -6,6 +6,8 @@ const IMAGES = {
     c: "/Images/icons/C.png",
     handshake: "/Images/icons/Handshake.png",
     logo: "/Images/logo/logo.png",
+    smily: "/Images/icons/Emoji1.png",
+    sad: "/Images/icons/Emoji2.png",
   },
 };
 

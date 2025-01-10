@@ -13,7 +13,7 @@ const CaseStudy = ({ id }) => {
     router.push(`/Casestudies/${id}`);
   };
   return (
-    <section className="py-6 px-4 lg:py-6 lg:px-20">
+    <section className="">
       <div className="w-full relative group ">
         <div className="overflow-hidden mx-auto relative group ">
           <Image
