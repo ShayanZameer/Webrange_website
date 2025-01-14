@@ -1,6 +1,9 @@
 const IMAGES = {
   casestudy: "/Images/CaseStudy/CaseStudy.png",
   About: "/Images/About/About.png",
+  Strategy1: "/Images/Strategy/Str1.png",
+  Strategy2: "/Images/Strategy/Str2.png",
+
   icons: {
     flutter: "/Images/icons/flutter.png",
     dart: "/Images/icons/Dart.png",
