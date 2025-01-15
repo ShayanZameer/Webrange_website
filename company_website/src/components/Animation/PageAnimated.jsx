@@ -24,7 +24,9 @@ export default function AnimatedPage({ title, children }) {
       {/* Main Content */}
       {showMainContent && (
         <motion.div
-          className="absolute top-0 left-0 w-full h-screen bg-white p-8"
+          className={`absolute top-0 left-0 w-full ${
+            showMainContent ? "overflow-y-auto h-screen" : "overflow-hidden"
+          }`}
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, ease: "easeOut", delay: 0.3 }}

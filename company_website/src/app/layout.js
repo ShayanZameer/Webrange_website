@@ -1,5 +1,6 @@
 import { Geist, Geist_Mono } from "next/font/google";
-import Navbar from "@/components/Navbar/Navbar";
+import Navbar from "@/components/global/Navbar";
+import SmoothScroll from "@/components/SmoothScroll/SmoothScroll";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -23,10 +24,12 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        {/* <SmoothScroll> */}
         <main>{children}</main>
         <div className="fixed bottom-10 left-1/2 transform -translate-x-1/2 z-50">
           <Navbar />
         </div>
+        {/* </SmoothScroll> */}
       </body>
     </html>
   );

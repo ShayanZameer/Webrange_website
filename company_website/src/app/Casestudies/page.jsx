@@ -1,5 +1,5 @@
 import CaseStudy from "./_components/CaseStudy";
-import { FooterSection } from "./_components/FooterSection";
+import { FooterSection } from "../../components/global/FooterSection";
 
 const Page = () => {
   const caseStudies = [

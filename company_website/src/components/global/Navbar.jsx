@@ -38,7 +38,7 @@ const Navbar = () => {
 
       <div className="flex-grow flex justify-center ml-2">
         <ul className="flex items-center justify-between space-x-6 text-sm lg:text-base">
-          <NavLink href="/services">Services</NavLink>
+          <NavLink href="/Services">Services</NavLink>
           <NavLink href="/Casestudies">Case Studies</NavLink>
           <NavLink href="/industries">Industries</NavLink>
           <NavLink href="/insights">Insights</NavLink>

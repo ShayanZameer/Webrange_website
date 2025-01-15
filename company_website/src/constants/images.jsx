@@ -3,6 +3,8 @@ const IMAGES = {
   About: "/Images/About/About.png",
   Strategy1: "/Images/Strategy/Str1.png",
   Strategy2: "/Images/Strategy/Str2.png",
+  about: "/Images/About/About.png",
+  profile: "/Images/Profile/profile.png",
 
   icons: {
     flutter: "/Images/icons/flutter.png",
@@ -12,6 +14,8 @@ const IMAGES = {
     logo: "/Images/logo/logo.png",
     smily: "/Images/icons/Emoji1.png",
     sad: "/Images/icons/Emoji2.png",
+    emoji1: "/Images/icons/Emoji1.png",
+    google: "/Images/icons/google.png",
   },
 };
 
