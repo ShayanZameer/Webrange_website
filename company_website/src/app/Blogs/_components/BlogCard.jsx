@@ -1,4 +1,5 @@
 import { MdArrowOutward } from "react-icons/md";
+import Image from "next/image";
 const BlogCard = ({
   title,
   writtenBy,
@@ -10,10 +11,19 @@ const BlogCard = ({
   return (
     <div className="max-w-sm overflow-hidden">
       <div className="relative ">
-        <img
+        {/* <img
           src={cardImage}
           alt={title}
           className="w-full h-48 rounded-t-2xl"
+        /> */}
+
+        <Image
+          src={cardImage}
+          alt={title}
+          className="w-full h-48 rounded-t-2xl"
+          width={500}
+          height={192}
+          objectFit="cover"
         />
       </div>
 
