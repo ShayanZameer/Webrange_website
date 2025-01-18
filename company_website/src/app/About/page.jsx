@@ -9,6 +9,7 @@ import ProfileCard from "./_components/Profile";
 import IMAGES from "@/constants/images";
 import { FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
 import { useRef } from "react";
+import Worldmap from "@/components/global/Worldmap";
 
 const profileData = {
   profileImage: IMAGES.profile,
@@ -59,9 +60,13 @@ export default function About() {
             imageSrc={IMAGES.About}
           />
         </div>
-        <div ref={servicesSectionRef} className=" flex justify-center px-12">
-          <ProfileCard {...profileData} />
-          <ProfileCard {...profileData} />
+
+        <div ref={servicesSectionRef} className="flex justify-center px-12">
+          {/* Responsive Grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 ">
+            <ProfileCard {...profileData} />
+            <ProfileCard {...profileData} />
+          </div>
         </div>
 
         <div>
@@ -70,6 +75,10 @@ export default function About() {
 
         <div>
           <SuperPower />
+        </div>
+
+        <div>
+          <Worldmap />
         </div>
 
         <div>
