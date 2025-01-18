@@ -2,9 +2,29 @@
 import { FaInstagram, FaTwitter, FaTimes } from "react-icons/fa";
 import IMAGES from "@/constants/images";
 import { useRouter } from "next/navigation";
+import Image from "next/image";
+import { useState, useEffect } from "react";
 
+const getCurrentDateTime = () => {
+  const current = new Date();
+  return current.toLocaleString("en-US", {
+    weekday: "long",
+    hour: "numeric",
+    minute: "numeric",
+    hour12: true,
+  });
+};
 const VideoSection = () => {
+  const [dateTime, setDateTime] = useState(getCurrentDateTime());
+
   const router = useRouter();
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setDateTime(getCurrentDateTime());
+    }, 60000);
+
+    return () => clearInterval(interval);
+  }, []);
   return (
     <div className="relative w-full h-screen overflow-hidden font-[Jakarta]">
       <video
@@ -22,14 +42,10 @@ const VideoSection = () => {
       <div className="relative z-10 flex flex-col justify-between h-full text-white bg-black bg-opacity-50">
         <div className="flex justify-between items-center px-6 sm:px-9 py-5">
           <div className="text-xs sm:text-sm font-jakarta text-[#FFFFFF80]">
-            Monday 15:20AM
+            {dateTime}
           </div>
           <div>
-            <img
-              src={IMAGES.icons.logo}
-              alt="Logo"
-              className="w-12 h-10 sm:w-16 sm:h-12"
-            />
+            <Image src={IMAGES.icons.logo} alt="Logo" width={64} height={48} />
           </div>
           <div className="flex gap-3 sm:gap-4 text-[#FFFFFF80]">
             <FaInstagram className="text-base sm:text-lg cursor-pointer hover:text-gray-400" />
@@ -62,16 +78,21 @@ const VideoSection = () => {
             </div>
           </div>
           <div className="hidden lg:flex gap-4 items-center">
-            <img
+            <Image
               src={IMAGES.hero2}
               alt="Hero 2"
-              className="w-32 sm:w-44 h-64 sm:h-80 object-cover rounded-3xl shadow-lg"
+              width={176}
+              height={320}
+              className="object-cover rounded-3xl shadow-lg"
             />
-            <div className="h-full flex items-center">
-              <img
+
+            <div className="flex items-center">
+              <Image
                 src={IMAGES.hero1}
                 alt="Hero 1"
-                className="w-28 sm:w-40 h-48 sm:h-60 object-cover rounded-3xl shadow-lg"
+                width={160}
+                height={160}
+                className="object-cover rounded-3xl shadow-lg"
               />
             </div>
           </div>
