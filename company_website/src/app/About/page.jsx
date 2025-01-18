@@ -1,13 +1,15 @@
+"use client";
 import AnimatedPage from "@/components/Animation/PageAnimated";
 import Landing from "../../components/global/FocusSection/Landing";
 import FocusSection from "@/components/global/FocusSection/FocusSection";
 import SuperPower from "@/components/global/SuperPower";
 import PartnersSection from "@/components/global/PartnersSection";
 import FooterSection from "@/components/global/FooterSection";
-
 import ProfileCard from "./_components/Profile";
 import IMAGES from "@/constants/images";
 import { FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
+import { useRef } from "react";
+
 const profileData = {
   profileImage: IMAGES.profile,
   yearsOfExperience: 10,
@@ -33,6 +35,17 @@ const profileData = {
   ],
 };
 export default function About() {
+  const servicesSectionRef = useRef(null);
+
+  const handleExploreAllClick = () => {
+    if (servicesSectionRef.current) {
+      servicesSectionRef.current.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+  };
+
   return (
     <AnimatedPage title="About">
       <div>
@@ -41,17 +54,14 @@ export default function About() {
             title="Who we are"
             subtitle="We are a remote design team with strong experience in creating UX/UI solutions"
             description="Creating meaningful digital experiences."
-            buttonText="Leadership Team"
+            buttonText="Explore All"
+            onClick={handleExploreAllClick}
             imageSrc={IMAGES.About}
           />
         </div>
-        <div className="p-10 px-16 flex  ">
-          <div className=" ">
-            <ProfileCard {...profileData} />
-          </div>
-          <div className="">
-            <ProfileCard {...profileData} />
-          </div>
+        <div ref={servicesSectionRef} className=" flex justify-center px-12">
+          <ProfileCard {...profileData} />
+          <ProfileCard {...profileData} />
         </div>
 
         <div>

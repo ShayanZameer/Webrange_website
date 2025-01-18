@@ -9,7 +9,7 @@ import ProblemSection from "./_components/ProblemSection";
 import Ticon from "../_components/Ticon";
 import CaseStudy from "../_components/CaseStudy";
 import FooterSection from "../../../components/global/FooterSection";
-import CloseButton from "@/components/Button/CloseButton";
+import CloseButton from "@/components/global/CloseButton";
 
 const CaseStudyDetails = () => {
   //   const { CaseID } = useParams();

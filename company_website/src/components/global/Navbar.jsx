@@ -25,7 +25,6 @@ const Navbar = () => {
 
   return (
     <nav className="flex items-center bg-navcolor text-white px-16 py-4 rounded-full">
-      {/* Logo Section */}
       <div className="flex-none flex items-center -ml-10">
         <Image
           src={IMAGES.icons.logo}
@@ -38,10 +37,10 @@ const Navbar = () => {
 
       <div className="flex-grow flex justify-center ml-2">
         <ul className="flex items-center justify-between space-x-6 text-sm lg:text-base">
+          <NavLink href="/">Home</NavLink>
           <NavLink href="/Services">Services</NavLink>
           <NavLink href="/Casestudies">Case Studies</NavLink>
-          <NavLink href="/industries">Industries</NavLink>
-          <NavLink href="/insights">Insights</NavLink>
+          <NavLink href="/blogs">Blogs</NavLink>
           <NavLink href="/About">About</NavLink>
         </ul>
       </div>

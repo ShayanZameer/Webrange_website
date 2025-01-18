@@ -1,29 +1,46 @@
+"use client";
+
+import React, { useRef } from "react";
 import Landing from "@/components/global/FocusSection/Landing";
 import FooterSection from "@/components/global/FooterSection";
 import { ServicesScroll } from "./_components/ServicesScroll";
 import IMAGES from "@/constants/images";
+import AnimatedPage from "@/components/Animation/PageAnimated";
 
 const page = () => {
+  const servicesSectionRef = useRef(null);
+
+  const handleExploreAllClick = () => {
+    if (servicesSectionRef.current) {
+      servicesSectionRef.current.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+  };
+
   return (
-    <div>
+    <AnimatedPage title="Services">
       <div>
-        <Landing
-          title="Our services"
-          subtitle="We transform business requirements into 
-high-level App."
-          buttonText="Explore All Services"
-          imageSrc={IMAGES.about}
-        />
-      </div>
+        <div>
+          <Landing
+            title="Our services"
+            subtitle="We transform business requirements into high-level App."
+            buttonText="Explore All"
+            imageSrc={IMAGES.about}
+            onClick={handleExploreAllClick}
+          />
+        </div>
 
-      <div className="p-8">
-        <ServicesScroll />
-      </div>
+        <div className="p-8" ref={servicesSectionRef}>
+          <ServicesScroll />
+        </div>
 
-      <div>
-        <FooterSection />
+        <div>
+          <FooterSection />
+        </div>
       </div>
-    </div>
+    </AnimatedPage>
   );
 };
 

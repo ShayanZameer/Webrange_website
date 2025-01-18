@@ -5,6 +5,10 @@ const IMAGES = {
   Strategy2: "/Images/Strategy/Str2.png",
   about: "/Images/About/About.png",
   profile: "/Images/Profile/profile.png",
+  worldmap: "/Images/Worldmap/worldmap.png",
+  blog: "/Images/Blog/Blog.png",
+  hero1: "/Images/Hero/Hero1.png",
+  hero2: "/Images/Hero/Hero2.png",
 
   icons: {
     flutter: "/Images/icons/flutter.png",

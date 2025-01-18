@@ -1,7 +1,7 @@
 "use client";
 import IMAGES from "@/constants/images";
 import Image from "next/image";
-import SocialLink from "@/components/SocialLink/SocialLink";
+import SocialLink from "@/components/global/SocialLink";
 import { socialLinks } from "@/utils/SocialLinksData/SocialLinks";
 import { useRouter } from "next/navigation";
 export const FooterSection = () => {

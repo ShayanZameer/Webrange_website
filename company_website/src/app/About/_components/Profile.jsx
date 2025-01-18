@@ -12,10 +12,8 @@ const ProfileCard = ({
   socialLinks,
 }) => {
   return (
-    <div className="max-w-xl p-6 border-t border-b border-r border-black mx-auto">
-      {/* Profile Image and Experience */}
+    <div className=" p-6 border-t border-b border-r border-black ">
       <div className="flex flex-col md:flex-row md:space-x-12 items-center md:items-start">
-        {/* Profile Image */}
         <div className="relative w-52 h-52 md:w-[250px] md:h-60 overflow-hidden flex-shrink-0">
           <Image
             src={profileImage}
@@ -26,8 +24,7 @@ const ProfileCard = ({
           />
         </div>
 
-        {/* Experience */}
-        <div className="mt-4 md:mt-0 flex md:space-x-2 md:items-center">
+        <div className="mt-4 md:mt-0 flex  px-8 justify-end md:space-x-2 md:items-center">
           <h2 className="text-3xl font-jakarta font-bold text-black">
             {yearsOfExperience}+
           </h2>

@@ -1,22 +1,22 @@
 import AnimatedPage from "@/components/Animation/PageAnimated";
-import CloseButton from "@/components/Button/CloseButton";
+import CloseButton from "@/components/global/CloseButton";
 import InfoRow from "./_components/InfoRow";
 import { FaArrowRight, FaEnvelope } from "react-icons/fa";
 import { FaPhone } from "react-icons/fa6";
 import { CiLocationOn } from "react-icons/ci";
 import { socialLinks } from "@/utils/SocialLinksData/SocialLinks";
-import SocialLink from "@/components/SocialLink/SocialLink";
+import SocialLink from "@/components/global/SocialLink";
 import AnimatedInput from "./_components/AnimatedInput";
 
 export default function ContactUs() {
   return (
     <AnimatedPage title="Contact Us">
-      <div className="py-6 px-4 lg:py-10 lg:px-20">
+      <div className="py-6 px-4 lg:py-10 lg:px-20 ">
         <div className="flex justify-end">
           <CloseButton />
         </div>
 
-        <div className="flex flex-col lg:flex-row py-4 px-2 gap-8">
+        <div className="flex flex-col  items-center h-[80vh]   lg:flex-row  px-2 gap-8">
           <div className="flex-1 space-y-6">
             <div>
               <p className="font-jakarta font-normal text-greyColour text-sm">
