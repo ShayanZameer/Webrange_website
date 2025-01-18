@@ -1,7 +1,8 @@
 import { Geist, Geist_Mono } from "next/font/google";
-import Navbar from "@/components/global/Navbar";
+import Navbar from "@/components/global/Navbar/Navbar";
 import SmoothScroll from "@/components/SmoothScroll/SmoothScroll";
 import "./globals.css";
+import { Check } from "@/components/global/Navbar/Check";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -26,9 +27,8 @@ export default function RootLayout({ children }) {
       >
         {/* <SmoothScroll> */}
         <main>{children}</main>
-        <div className="fixed bottom-10 left-1/2 transform -translate-x-1/2 z-50">
-          <Navbar />
-        </div>
+
+        <Check />
         {/* </SmoothScroll> */}
       </body>
     </html>

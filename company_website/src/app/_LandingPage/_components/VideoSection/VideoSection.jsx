@@ -41,13 +41,21 @@ const VideoSection = () => {
       </video>
       <div className="relative z-10 flex flex-col justify-between h-full text-white bg-black bg-opacity-50">
         <div className="flex justify-between items-center px-6 sm:px-9 py-5">
-          <div className="text-xs sm:text-sm font-jakarta text-[#FFFFFF80]">
+          <div className="hidden lg:block text-xs sm:text-sm font-jakarta text-[#FFFFFF80]">
             {dateTime}
           </div>
-          <div>
-            <Image src={IMAGES.icons.logo} alt="Logo" width={64} height={48} />
+
+          <div className="flex-grow flex justify-end lg:justify-center items-center">
+            <Image
+              src={IMAGES.icons.logo}
+              alt="Logo"
+              width={64}
+              height={48}
+              className="object-contain"
+            />
           </div>
-          <div className="flex gap-3 sm:gap-4 text-[#FFFFFF80]">
+
+          <div className="hidden lg:flex items-center gap-3 sm:gap-4 text-[#FFFFFF80]">
             <FaInstagram className="text-base sm:text-lg cursor-pointer hover:text-gray-400" />
             <FaTwitter className="text-base sm:text-lg cursor-pointer hover:text-gray-400" />
             <FaTimes className="text-base sm:text-lg cursor-pointer hover:text-gray-400" />
