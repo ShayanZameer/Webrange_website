@@ -1,36 +1,43 @@
-import IMAGES from "@/constants/images";
 import { MdArrowOutward } from "react-icons/md";
-
-const BlogCard = () => {
+const BlogCard = ({
+  title,
+  writtenBy,
+  writtenDate,
+  cardImage,
+  description,
+  onClick,
+}) => {
   return (
     <div className="max-w-sm overflow-hidden">
-      <div className="relative">
+      <div className="relative ">
         <img
-          src={IMAGES.blog}
-          alt="Office chairs"
-          className=" w-full    h-48 "
+          src={cardImage}
+          alt={title}
+          className="w-full h-48 rounded-t-2xl"
         />
       </div>
 
-      <div className=" py-4">
+      <div className="py-4">
         <div className="text-sm text-[#303F9F] font-jakarta mb-2">
           <span className="font-medium text-[#303F9F] font-jakarta">
-            Olivia Rhye
+            {writtenBy}
           </span>{" "}
-          • 1 Jan 2023
+          • {writtenDate}
         </div>
 
-        <div className="flex justify-between mt-4 ">
+        <div className="flex justify-between mt-4">
           <h3 className="text-lg font-semibold w-[280px] font-jakarta text-gray-900 leading-tight">
-            Understanding the Importance of CMAs in Real Estate
+            {title}
           </h3>
 
-          <MdArrowOutward className="text-lg my-1 " />
+          <MdArrowOutward
+            onClick={onClick}
+            className="text-lg my-1 hover:scale-150 cursor-pointer"
+          />
         </div>
 
         <p className="text-sm font-jakarta text-[#667085] mt-3">
-          How do you create compelling presentations that wow your colleagues
-          and impress your managers?
+          {description}
         </p>
       </div>
     </div>

@@ -9,6 +9,7 @@ const IMAGES = {
   blog: "/Images/Blog/Blog.png",
   hero1: "/Images/Hero/Hero1.png",
   hero2: "/Images/Hero/Hero2.png",
+  blogHeadingImage: "/Images/Blog/BlogHeadingImage.png",
 
   icons: {
     flutter: "/Images/icons/flutter.png",

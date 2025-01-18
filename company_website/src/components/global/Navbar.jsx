@@ -40,7 +40,7 @@ const Navbar = () => {
           <NavLink href="/">Home</NavLink>
           <NavLink href="/Services">Services</NavLink>
           <NavLink href="/Casestudies">Case Studies</NavLink>
-          <NavLink href="/blogs">Blogs</NavLink>
+          <NavLink href="/Blogs">Blogs</NavLink>
           <NavLink href="/About">About</NavLink>
         </ul>
       </div>

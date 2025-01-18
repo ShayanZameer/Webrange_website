@@ -21,7 +21,6 @@ const Page = () => {
         </p>
 
         <div className="py-6 px-4 lg:py-6 lg:px-20">
-          {/* Pass a unique id to each CaseStudy */}
           {caseStudies.map((caseStudy) => (
             <CaseStudy key={caseStudy.id} id={caseStudy.id} />
           ))}
