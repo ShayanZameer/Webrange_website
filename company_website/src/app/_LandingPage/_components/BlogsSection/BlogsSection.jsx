@@ -24,13 +24,13 @@ const BlogsSection = () => {
             writtenDate={blog.writtenDate}
             cardImage={blog.images[0]}
             description={blog.mainHeading[0].paragraphs[0]}
-            // onClick={() => {
-            //   router.push(
-            //     `/Blogs/${blog.id}?blog=${encodeURIComponent(
-            //       JSON.stringify(blog)
-            //     )}`
-            //   );
-            // }}
+            onClick={() => {
+              router.push(
+                `/Blogs/${blog.id}?blog=${encodeURIComponent(
+                  JSON.stringify(blog)
+                )}`
+              );
+            }}
           />
         ))}
       </div>

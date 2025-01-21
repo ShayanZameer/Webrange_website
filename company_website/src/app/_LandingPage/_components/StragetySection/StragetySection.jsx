@@ -64,7 +64,7 @@ const StragetySection = () => {
         setCurrentIndex((prevIndex) =>
           prevIndex === strategies.length - 1 ? 0 : prevIndex + 1
         );
-      }, 1000000);
+      }, 100000);
     } else {
       setIsAnimating(false);
       if (interval) clearInterval(interval);

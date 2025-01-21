@@ -64,10 +64,13 @@ export default function About() {
 
         <AnimatedWrapper>
           <div ref={servicesSectionRef} className="flex justify-center px-12">
-            {/* Responsive Grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 ">
-              <ProfileCard {...profileData} />
-              <ProfileCard {...profileData} />
+            <div className="grid grid-cols-1 lg:grid-cols-2">
+              <div className="  lg:border-r lg:border-black">
+                <ProfileCard {...profileData} />
+              </div>
+              <div>
+                <ProfileCard {...profileData} />
+              </div>
             </div>
           </div>
         </AnimatedWrapper>

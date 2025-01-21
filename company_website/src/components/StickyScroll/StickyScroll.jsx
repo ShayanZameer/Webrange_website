@@ -94,12 +94,17 @@ export const StickyScrollRevealDemo = ({ content, contentClassName }) => {
           <div className="h-40" />
         </div>
       </div>
+      <div
+        className={
+          "h-[1500px] w-[3px] bg-gradient-to-b from-white/0 via-white/70 to-white/0"
+        }
+      />
 
       {/* Right section (image) */}
       <div
         style={{ background: backgroundGradient }}
         className={cn(
-          "hidden lg:block h-60 w-80 rounded-3xl bg-white sticky top-20 overflow-hidden",
+          "hidden lg:block h-60 w-[500px]  sticky rounded-3xl top-20   overflow-hidden",
           contentClassName
         )}
       >

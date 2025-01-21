@@ -103,7 +103,7 @@ const CaseStudyDetails = () => {
 
               {/* Technologies Used Section */}
               <div className="lg:w-1/3 w-full">
-                <h2 className="text-lg lg:text-xl mt-1 font-semibold mb-2 font-jakarta">
+                <h2 className="text-lg lg:text-lg mt-1 font-semibold mb-2 font-jakarta">
                   Technologies Used
                 </h2>
 
@@ -114,6 +114,22 @@ const CaseStudyDetails = () => {
                 </div>
               </div>
             </div>
+          </div>
+          <div className=" py-4">
+            {images.slice(0, 1).map((src, index) => (
+              <div
+                key={index}
+                className="flex flex-wrap gap-3 justify-center mt-8"
+              >
+                <Image
+                  src={images[0]}
+                  alt="images"
+                  width={1300}
+                  height={500}
+                  className="w-full mx-auto object-cover transition-all duration-300 group-hover:scale-[0.99] group-hover:rounded-lg"
+                />
+              </div>
+            ))}
           </div>
         </div>
       </div>

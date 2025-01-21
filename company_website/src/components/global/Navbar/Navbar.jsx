@@ -4,16 +4,20 @@ import { useState, useEffect } from "react";
 import { FaArrowRight, FaBars, FaTimes } from "react-icons/fa";
 import Image from "next/image";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
+import { useRouter, usePathname } from "next/navigation";
 import IMAGES from "@/constants/images";
 
-const NavLink = ({ href, children, onClick }) => {
+const NavLink = ({ href, children, onClick, isActive }) => {
   return (
     <li>
       <Link
         href={href}
         onClick={onClick}
-        className="relative inline-block px-4 py-2 text-center rounded-full whitespace-nowrap hover:bg-navhover hover:text-white font-jakarta transition duration-200"
+        className={`relative inline-block px-4 py-2 text-center rounded-full whitespace-nowrap font-jakarta transition duration-200 ${
+          isActive
+            ? "bg-navhover text-white"
+            : "hover:bg-navhover hover:text-white"
+        }`}
       >
         {children}
       </Link>
@@ -23,6 +27,7 @@ const NavLink = ({ href, children, onClick }) => {
 
 const Navbar = () => {
   const router = useRouter();
+  const pathname = usePathname();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
 
@@ -51,6 +56,14 @@ const Navbar = () => {
     setIsMenuOpen(false);
   };
 
+  const navLinks = [
+    { href: "/", label: "Home" },
+    { href: "/Services", label: "Services" },
+    { href: "/Casestudies", label: "Case Studies" },
+    { href: "/Blogs", label: "Blogs" },
+    { href: "/About", label: "About" },
+  ];
+
   return (
     <>
       {isMobile ? (
@@ -68,21 +81,16 @@ const Navbar = () => {
           >
             <nav className="flex flex-col items-center justify-center h-full">
               <ul className="space-y-6 text-white text-lg">
-                <NavLink href="/" onClick={closeMenu}>
-                  Home
-                </NavLink>
-                <NavLink href="/Services" onClick={closeMenu}>
-                  Services
-                </NavLink>
-                <NavLink href="/Casestudies" onClick={closeMenu}>
-                  Case Studies
-                </NavLink>
-                <NavLink href="/Blogs" onClick={closeMenu}>
-                  Blogs
-                </NavLink>
-                <NavLink href="/About" onClick={closeMenu}>
-                  About
-                </NavLink>
+                {navLinks.map((link) => (
+                  <NavLink
+                    key={link.href}
+                    href={link.href}
+                    onClick={closeMenu}
+                    isActive={pathname === link.href}
+                  >
+                    {link.label}
+                  </NavLink>
+                ))}
               </ul>
               <button
                 onClick={() => {
@@ -111,11 +119,15 @@ const Navbar = () => {
 
           <div className="flex-grow flex justify-center ml-2">
             <ul className="flex items-center justify-between space-x-6 text-sm lg:text-base">
-              <NavLink href="/">Home</NavLink>
-              <NavLink href="/Services">Services</NavLink>
-              <NavLink href="/Casestudies">Case Studies</NavLink>
-              <NavLink href="/Blogs">Blogs</NavLink>
-              <NavLink href="/About">About</NavLink>
+              {navLinks.map((link) => (
+                <NavLink
+                  key={link.href}
+                  href={link.href}
+                  isActive={pathname === link.href}
+                >
+                  {link.label}
+                </NavLink>
+              ))}
             </ul>
           </div>
 

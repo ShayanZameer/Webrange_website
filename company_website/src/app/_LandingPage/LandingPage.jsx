@@ -25,15 +25,15 @@ const LandingPage = () => {
       </div>
 
       <div>
-        {/* <AnimatedWrapper> */}
-        <StragetySection />
-        {/* </AnimatedWrapper> */}
+        <AnimatedWrapper>
+          <StragetySection />
+        </AnimatedWrapper>
       </div>
 
       <div>
-        {/* <AnimatedWrapper> */}
-        <ServicesSection />
-        {/* </AnimatedWrapper> */}
+        <AnimatedWrapper>
+          <ServicesSection />
+        </AnimatedWrapper>
       </div>
 
       <div>

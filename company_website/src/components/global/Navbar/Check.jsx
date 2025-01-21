@@ -21,10 +21,8 @@ export const Check = () => {
   return (
     <div>
       {isMobile ? (
-        // If on mobile screen, just show the Navbar
         <Navbar />
       ) : (
-        // If on desktop screen, show Navbar with fixed positioning
         <div className="fixed bottom-10 left-1/2 transform -translate-x-1/2 z-50">
           <Navbar />
         </div>

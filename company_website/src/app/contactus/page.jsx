@@ -48,7 +48,7 @@ export default function ContactUs() {
             </div>
 
             <div>
-              <div className="flex items-center space-x-4">
+              <div className="flex items-center mb-6 space-x-4">
                 {socialLinks.map((link, index) => (
                   <SocialLink key={index} icon={link.icon} href={link.href} />
                 ))}
