@@ -10,6 +10,7 @@ import IMAGES from "@/constants/images";
 import { FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
 import { useRef } from "react";
 import Worldmap from "@/components/global/Worldmap";
+import AnimatedWrapper from "@/components/Animation/AnimatedWrapper";
 
 const profileData = {
   profileImage: IMAGES.profile,
@@ -61,33 +62,43 @@ export default function About() {
           />
         </div>
 
-        <div ref={servicesSectionRef} className="flex justify-center px-12">
-          {/* Responsive Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 ">
-            <ProfileCard {...profileData} />
-            <ProfileCard {...profileData} />
+        <AnimatedWrapper>
+          <div ref={servicesSectionRef} className="flex justify-center px-12">
+            {/* Responsive Grid */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 ">
+              <ProfileCard {...profileData} />
+              <ProfileCard {...profileData} />
+            </div>
           </div>
-        </div>
+        </AnimatedWrapper>
 
-        <div>
-          <FocusSection />
-        </div>
+        <AnimatedWrapper>
+          <div>
+            <FocusSection />
+          </div>
+        </AnimatedWrapper>
 
-        <div>
-          <SuperPower />
-        </div>
+        <AnimatedWrapper>
+          <div>
+            <SuperPower />
+          </div>
+        </AnimatedWrapper>
 
-        <div>
-          <Worldmap />
-        </div>
-
-        <div>
-          <PartnersSection />
-        </div>
-
-        <div>
-          <FooterSection />
-        </div>
+        <AnimatedWrapper>
+          <div>
+            <Worldmap />
+          </div>
+        </AnimatedWrapper>
+        <AnimatedWrapper>
+          <div>
+            <PartnersSection />
+          </div>
+        </AnimatedWrapper>
+        <AnimatedWrapper>
+          <div>
+            <FooterSection />
+          </div>
+        </AnimatedWrapper>
       </div>
     </AnimatedPage>
   );

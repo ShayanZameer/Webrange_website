@@ -6,6 +6,7 @@ import FooterSection from "@/components/global/FooterSection";
 import { ServicesScroll } from "./_components/ServicesScroll";
 import IMAGES from "@/constants/images";
 import AnimatedPage from "@/components/Animation/PageAnimated";
+import AnimatedWrapper from "@/components/Animation/AnimatedWrapper";
 
 const page = () => {
   const servicesSectionRef = useRef(null);
@@ -32,13 +33,17 @@ const page = () => {
           />
         </div>
 
-        <div className="p-8" ref={servicesSectionRef}>
-          <ServicesScroll />
-        </div>
+        <AnimatedWrapper>
+          <div className="p-8" ref={servicesSectionRef}>
+            <ServicesScroll />
+          </div>
+        </AnimatedWrapper>
 
-        <div>
-          <FooterSection />
-        </div>
+        <AnimatedWrapper>
+          <div>
+            <FooterSection />
+          </div>
+        </AnimatedWrapper>
       </div>
     </AnimatedPage>
   );

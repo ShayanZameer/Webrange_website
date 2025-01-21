@@ -1,3 +1,4 @@
+import AnimatedWrapper from "@/components/Animation/AnimatedWrapper";
 import { StickyScrollRevealDemo } from "@/components/StickyScroll/StickyScroll";
 import IMAGES from "@/constants/images";
 
@@ -102,9 +103,11 @@ const ServicesSection = () => {
         drive growth and success.
       </p>
 
-      <div className="p-10 ">
-        <StickyScrollRevealDemo content={content} />
-      </div>
+      <AnimatedWrapper>
+        <div className="p-10 ">
+          <StickyScrollRevealDemo content={content} />
+        </div>
+      </AnimatedWrapper>
     </div>
   );
 };

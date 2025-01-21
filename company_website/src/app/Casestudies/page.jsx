@@ -1,14 +1,13 @@
+"use client";
+
 import CaseStudy from "./_components/CaseStudy";
+
+import caseStudyData from "@/utils/CaseStudyData/CaseStudyData";
 import { FooterSection } from "../../components/global/FooterSection";
 import AnimatedPage from "@/components/Animation/PageAnimated";
+import AnimatedWrapper from "@/components/Animation/AnimatedWrapper";
 
 const Page = () => {
-  const caseStudies = [
-    { id: 1, title: "Case Study 1" },
-    { id: 2, title: "Case Study 2" },
-    { id: 3, title: "Case Study 3" },
-  ];
-
   return (
     <AnimatedPage title="Case Studies">
       <div>
@@ -21,8 +20,12 @@ const Page = () => {
         </p>
 
         <div className="py-6 px-4 lg:py-6 lg:px-20">
-          {caseStudies.map((caseStudy) => (
-            <CaseStudy key={caseStudy.id} id={caseStudy.id} />
+          {caseStudyData?.map((caseStudy) => (
+            <div key={caseStudy.id}>
+              <AnimatedWrapper>
+                <CaseStudy key={caseStudy.id} {...caseStudy} />
+              </AnimatedWrapper>
+            </div>
           ))}
         </div>
 

@@ -9,6 +9,7 @@ import BlogsSection from "./_components/BlogsSection/BlogsSection";
 import SuperPower from "@/components/global/SuperPower";
 import Worldmap from "@/components/global/Worldmap";
 import FooterSection from "@/components/global/FooterSection";
+import AnimatedWrapper from "@/components/Animation/AnimatedWrapper";
 
 const LandingPage = () => {
   return (
@@ -18,35 +19,51 @@ const LandingPage = () => {
       </div>
 
       <div className=" ">
-        <FocusSection />
+        <AnimatedWrapper>
+          <FocusSection />
+        </AnimatedWrapper>
       </div>
 
       <div>
+        {/* <AnimatedWrapper> */}
         <StragetySection />
+        {/* </AnimatedWrapper> */}
       </div>
 
       <div>
+        {/* <AnimatedWrapper> */}
         <ServicesSection />
+        {/* </AnimatedWrapper> */}
       </div>
 
       <div>
-        <PartnersSection />
+        <AnimatedWrapper>
+          <PartnersSection />
+        </AnimatedWrapper>
       </div>
 
       <div className="p-8">
-        <BlogsSection />
+        <AnimatedWrapper>
+          <BlogsSection />
+        </AnimatedWrapper>
       </div>
 
       <div>
-        <SuperPower />
+        <AnimatedWrapper>
+          <SuperPower />
+        </AnimatedWrapper>
       </div>
 
       <div>
-        <Worldmap />
+        <AnimatedWrapper>
+          <Worldmap />
+        </AnimatedWrapper>
       </div>
 
       <div className="py-8">
-        <FooterSection />
+        <AnimatedWrapper>
+          <FooterSection />
+        </AnimatedWrapper>
       </div>
     </div>
   );

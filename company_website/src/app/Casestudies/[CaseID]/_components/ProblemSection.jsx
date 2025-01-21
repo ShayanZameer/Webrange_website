@@ -4,7 +4,7 @@ const ProblemSection = ({ imageSrc, heading, description }) => {
   return (
     <div className="flex-1 border-r-borderColour border-r p-2 border-b-borderColour border-b">
       <div className="flex justify-between flex-1">
-        <h3 className="font-semibold text-base mb-4">{heading}</h3>
+        <h3 className="font-semibold text-base mt-1 mb-4">{heading}</h3>
         <img
           src={imageSrc}
           alt={heading}
