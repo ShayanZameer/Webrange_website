@@ -33,6 +33,16 @@ const content = [
         description:
           "Providing comprehensive testing, debugging, and maintenance services to ensure your app runs flawlessly.",
       },
+      {
+        name: "Lorem",
+        description:
+          "Providing comprehensive testing, debugging, and maintenance services to ensure your app runs flawlessly.",
+      },
+      {
+        name: "Lorem",
+        description:
+          "Providing comprehensive testing, debugging, and maintenance services to ensure your app runs flawlessly.",
+      },
     ],
   },
   {
@@ -123,13 +133,14 @@ export function ServicesScroll() {
       </div>
 
       {/* Right section (accordion items) */}
+
       <div className="w-full lg:w-1/2 pt-20 lg:block hidden">
         <motion.div
           initial={false}
           animate={{ opacity: [0, 1], y: [20, 0] }}
           transition={{ duration: 0.5 }}
           key={activeSection}
-          className="sticky top-20"
+          className=" top-20 max-h-[550px] overflow-y-auto"
         >
           <Accordion>
             {content[activeSection].items.map((item, index) => (
