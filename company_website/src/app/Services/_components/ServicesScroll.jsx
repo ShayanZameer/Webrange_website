@@ -87,58 +87,6 @@ const content = [
       },
     ],
   },
-  {
-    id: "04",
-    title: "Cloud Solutions",
-    items: [
-      {
-        name: "Cloud Architecture",
-        description:
-          "Designing and implementing scalable, resilient cloud architectures tailored to your business needs.",
-      },
-      {
-        name: "Serverless Computing",
-        description:
-          "Leveraging serverless technologies to reduce operational overhead and improve scalability.",
-      },
-      {
-        name: "Cloud Migration",
-        description:
-          "Assisting in seamless migration of existing applications and infrastructure to cloud platforms.",
-      },
-      {
-        name: "DevOps & CI/CD",
-        description:
-          "Implementing robust DevOps practices and continuous integration/deployment pipelines for efficient development and deployment processes.",
-      },
-    ],
-  },
-  {
-    id: "05",
-    title: "Cloud Solutions",
-    items: [
-      {
-        name: "Cloud Architecture",
-        description:
-          "Designing and implementing scalable, resilient cloud architectures tailored to your business needs.",
-      },
-      {
-        name: "Serverless Computing",
-        description:
-          "Leveraging serverless technologies to reduce operational overhead and improve scalability.",
-      },
-      {
-        name: "Cloud Migration",
-        description:
-          "Assisting in seamless migration of existing applications and infrastructure to cloud platforms.",
-      },
-      {
-        name: "DevOps & CI/CD",
-        description:
-          "Implementing robust DevOps practices and continuous integration/deployment pipelines for efficient development and deployment processes.",
-      },
-    ],
-  },
 ];
 
 export const ServicesScroll = () => {
