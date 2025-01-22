@@ -210,8 +210,8 @@ const StragetySection = () => {
     // Trigger animation only if user has interacted with the image
     if (
       currentScrollY > lastScrollY.current && // Ensure scrolling down
-      !scrollTriggered && // Prevent multiple triggers
-      interactionTriggered // Check if interaction occurred
+      !scrollTriggered &&
+      interactionTriggered
     ) {
       setScrollTriggered(true);
       setTimeout(() => {
