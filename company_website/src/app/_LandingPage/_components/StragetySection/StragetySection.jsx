@@ -11,6 +11,7 @@
 //   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 //   const [hovering, setHovering] = useState(false);
 //   const [scrollTriggered, setScrollTriggered] = useState(false);
+//   const [interactionTriggered, setInteractionTriggered] = useState(false); // New state for user interaction
 //   const lastScrollY = useRef(0);
 
 //   const caseStudy = caseStudyData[currentCaseStudyIndex];
@@ -34,21 +35,31 @@
 //   }, []);
 
 //   const handleScroll = (event) => {
-//     const currentScrollY = window.scrollY; // Get the current scroll position
+//     const currentScrollY = window.scrollY;
 
-//     // Trigger only if scrolling down
-//     if (currentScrollY > lastScrollY.current && !scrollTriggered) {
-//       setScrollTriggered(true); // Trigger animation
+//     // Trigger animation only if user has interacted with the image
+//     if (
+//       currentScrollY > lastScrollY.current && // Ensure scrolling down
+//       !scrollTriggered &&
+//       interactionTriggered
+//     ) {
+//       setScrollTriggered(true);
 //       setTimeout(() => {
 //         setCurrentCaseStudyIndex(
 //           (prevIndex) => (prevIndex + 1) % caseStudyData.length
 //         );
-//         setCurrentImageIndex(0); // Reset image index for the new case study
-//         setScrollTriggered(false); // Reset scroll trigger
+//         setCurrentImageIndex(0);
+//         setScrollTriggered(false);
+//         setInteractionTriggered(false); // Reset interaction trigger
 //       }, 800);
 //     }
 
 //     lastScrollY.current = currentScrollY;
+//   };
+
+//   const handleInteraction = () => {
+//     // Mark that the user interacted with the image
+//     setInteractionTriggered(true);
 //   };
 
 //   return (
@@ -75,7 +86,7 @@
 //             scrollTriggered
 //               ? { y: -600, opacity: 0, zIndex: 20 }
 //               : { y: 0, opacity: 1, zIndex: 20 }
-//           } // Upward animation on scroll
+//           }
 //           transition={{ duration: 0.4 }}
 //           className="absolute w-[200px] h-[200px] md:w-[250px] md:h-[250px] lg:w-[250px] lg:h-[300px] rounded-3xl"
 //           key={`image-${currentCaseStudyIndex}`}
@@ -93,7 +104,10 @@
 //           >
 //             <div
 //               className="w-full h-full transform transition-transform duration-700 ease-in-out"
-//               onMouseEnter={() => setHovering(true)}
+//               onMouseEnter={() => {
+//                 setHovering(true);
+//                 handleInteraction(); // User interaction via hover
+//               }}
 //               onMouseLeave={() => setHovering(false)}
 //             >
 //               <Image
@@ -173,7 +187,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import caseStudyData from "@/utils/CaseStudyData/CaseStudyData";
-import { Tilt } from "react-tilt";
+import Tilt from "react-parallax-tilt"; // Updated import
 import { motion } from "framer-motion";
 
 const StragetySection = () => {
@@ -263,23 +277,20 @@ const StragetySection = () => {
         >
           <Tilt
             className="relative w-full h-full cursor-pointer"
-            options={{
-              scale: 1.15,
-              max: 80,
-              perspective: 1500,
-              speed: 1000,
-              glare: true,
-              "max-glare": 0.2,
+            tiltMaxAngleX={35}
+            tiltMaxAngleY={35}
+            scale={1.15}
+            perspective={1500}
+            speed={1000}
+            glareEnable={true}
+            glareMaxOpacity={0.2}
+            onEnter={() => {
+              setHovering(true);
+              handleInteraction(); // User interaction via hover
             }}
+            onLeave={() => setHovering(false)}
           >
-            <div
-              className="w-full h-full transform transition-transform duration-700 ease-in-out"
-              onMouseEnter={() => {
-                setHovering(true);
-                handleInteraction(); // User interaction via hover
-              }}
-              onMouseLeave={() => setHovering(false)}
-            >
+            <div className="w-full h-full transform transition-transform duration-700 ease-in-out">
               <Image
                 src={caseStudy.images[currentImageIndex]}
                 alt={`Case Study Illustration ${currentImageIndex + 1}`}
@@ -298,14 +309,13 @@ const StragetySection = () => {
         >
           <Tilt
             className="relative w-full h-full cursor-pointer"
-            options={{
-              scale: 1.15,
-              max: 80,
-              perspective: 1500,
-              speed: 1000,
-              glare: true,
-              "max-glare": 0.2,
-            }}
+            tiltMaxAngleX={35}
+            tiltMaxAngleY={35}
+            scale={1.15}
+            perspective={1500}
+            speed={1000}
+            glareEnable={true}
+            glareMaxOpacity={0.2}
           >
             <Image
               src={
