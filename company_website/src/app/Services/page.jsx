@@ -33,11 +33,11 @@ const page = () => {
           />
         </div>
 
-        <AnimatedWrapper>
-          <div className="p-8" ref={servicesSectionRef}>
-            <ServicesScroll />
-          </div>
-        </AnimatedWrapper>
+        {/* <AnimatedWrapper> */}
+        <div className="px-8 py-4 " ref={servicesSectionRef}>
+          <ServicesScroll />
+        </div>
+        {/* </AnimatedWrapper> */}
 
         <AnimatedWrapper>
           <div>

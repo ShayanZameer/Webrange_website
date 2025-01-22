@@ -62,18 +62,18 @@ export default function About() {
           />
         </div>
 
-        <AnimatedWrapper>
-          <div ref={servicesSectionRef} className="flex justify-center px-12">
-            <div className="grid grid-cols-1 lg:grid-cols-2">
-              <div className="  lg:border-r lg:border-black">
-                <ProfileCard {...profileData} />
-              </div>
-              <div>
-                <ProfileCard {...profileData} />
-              </div>
+        {/* <AnimatedWrapper> */}
+        <div ref={servicesSectionRef} className="flex justify-center px-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2">
+            <div className="  lg:border-r lg:border-black">
+              <ProfileCard {...profileData} />
+            </div>
+            <div>
+              <ProfileCard {...profileData} />
             </div>
           </div>
-        </AnimatedWrapper>
+        </div>
+        {/* </AnimatedWrapper> */}
 
         <AnimatedWrapper>
           <div>

@@ -1,161 +1,351 @@
+// "use client";
+
+// import React, { useState, useEffect, useRef } from "react";
+// import Image from "next/image";
+// import caseStudyData from "@/utils/CaseStudyData/CaseStudyData";
+// import { Tilt } from "react-tilt";
+// import { motion } from "framer-motion";
+
+// const StragetySection = () => {
+//   const [currentCaseStudyIndex, setCurrentCaseStudyIndex] = useState(0);
+//   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+//   const [hovering, setHovering] = useState(false);
+//   const [scrollTriggered, setScrollTriggered] = useState(false);
+//   const lastScrollY = useRef(0);
+
+//   const caseStudy = caseStudyData[currentCaseStudyIndex];
+
+//   useEffect(() => {
+//     let interval;
+//     if (hovering && caseStudy.images.length > 1) {
+//       interval = setInterval(() => {
+//         setCurrentImageIndex(
+//           (prevIndex) => (prevIndex + 1) % caseStudy.images.length
+//         );
+//       }, 700);
+//     } else {
+//       clearInterval(interval);
+//     }
+//     return () => clearInterval(interval);
+//   }, [hovering, caseStudy.images.length]);
+
+//   useEffect(() => {
+//     lastScrollY.current = window.scrollY;
+//   }, []);
+
+//   const handleScroll = (event) => {
+//     const currentScrollY = window.scrollY; // Get the current scroll position
+
+//     // Trigger only if scrolling down
+//     if (currentScrollY > lastScrollY.current && !scrollTriggered) {
+//       setScrollTriggered(true); // Trigger animation
+//       setTimeout(() => {
+//         setCurrentCaseStudyIndex(
+//           (prevIndex) => (prevIndex + 1) % caseStudyData.length
+//         );
+//         setCurrentImageIndex(0); // Reset image index for the new case study
+//         setScrollTriggered(false); // Reset scroll trigger
+//       }, 800);
+//     }
+
+//     lastScrollY.current = currentScrollY;
+//   };
+
+//   return (
+//     <div
+//       className="flex flex-col md:flex-row items-center p-8 py-36 relative overflow-hidden"
+//       onWheel={handleScroll}
+//     >
+//       {/* Left Section - Title */}
+//       <motion.div
+//         className="md:flex-[0.8] lg:flex-[0.5] py-24 px-4 flex items-center justify-center"
+//         key={`left-${currentCaseStudyIndex}`}
+//       >
+//         <p className="font-jakarta px-12 font-extrabold text-6xl text-center md:text-left">
+//           {caseStudy.title}
+//         </p>
+//       </motion.div>
+
+//       {/* Middle Section - Image */}
+//       <div className="group relative md:flex-[1.8] lg:flex-[2.6] flex items-center justify-center">
+//         {/* Front Image */}
+//         <motion.div
+//           initial={{ y: 0 }}
+//           animate={
+//             scrollTriggered
+//               ? { y: -600, opacity: 0, zIndex: 20 }
+//               : { y: 0, opacity: 1, zIndex: 20 }
+//           } // Upward animation on scroll
+//           transition={{ duration: 0.4 }}
+//           className="absolute w-[200px] h-[200px] md:w-[250px] md:h-[250px] lg:w-[250px] lg:h-[300px] rounded-3xl"
+//           key={`image-${currentCaseStudyIndex}`}
+//         >
+//           <Tilt
+//             className="relative w-full h-full cursor-pointer"
+//             options={{
+//               scale: 1.15,
+//               max: 80,
+//               perspective: 1500,
+//               speed: 1000,
+//               glare: true,
+//               "max-glare": 0.2,
+//             }}
+//           >
+//             <div
+//               className="w-full h-full transform transition-transform duration-700 ease-in-out"
+//               onMouseEnter={() => setHovering(true)}
+//               onMouseLeave={() => setHovering(false)}
+//             >
+//               <Image
+//                 src={caseStudy.images[currentImageIndex]}
+//                 alt={`Case Study Illustration ${currentImageIndex + 1}`}
+//                 width={500}
+//                 height={500}
+//                 className="object-cover w-full h-full rounded-3xl"
+//               />
+//             </div>
+//           </Tilt>
+//         </motion.div>
+
+//         {/* Background Image for Next Object */}
+//         <div
+//           className="absolute w-[200px] h-[200px] md:w-[250px] md:h-[250px] lg:w-[250px] lg:h-[300px] rounded-3xl z-5"
+//           key={`bg-image-${(currentCaseStudyIndex + 1) % caseStudyData.length}`}
+//         >
+//           <Tilt
+//             className="relative w-full h-full cursor-pointer"
+//             options={{
+//               scale: 1.15,
+//               max: 80,
+//               perspective: 1500,
+//               speed: 1000,
+//               glare: true,
+//               "max-glare": 0.2,
+//             }}
+//           >
+//             <Image
+//               src={
+//                 caseStudyData[
+//                   (currentCaseStudyIndex + 1) % caseStudyData.length
+//                 ].images[0]
+//               }
+//               alt="Next Case Study Background"
+//               width={500}
+//               height={500}
+//               className="object-cover w-full h-full rounded-3xl"
+//             />
+//           </Tilt>
+//         </div>
+//       </div>
+
+//       {/* Right Section - About Project */}
+//       <motion.div
+//         className="md:flex-[1.3] lg:flex-[1.5] flex flex-col items-center md:items-start"
+//         key={`right-${currentCaseStudyIndex}`}
+//       >
+//         <p className="font-jakarta text-sm font-normal w-full md:w-80 text-center md:text-left mb-4">
+//           {caseStudy.aboutProject}
+//         </p>
+//         <p className="font-jakarta mt-4 text-xl font-semibold mb-4">
+//           Technologies Used
+//         </p>
+//         <div className="flex flex-wrap justify-center md:justify-start space-x-6">
+//           {caseStudy.technologyIcons.map((icon, index) => (
+//             <Image
+//               key={index}
+//               src={icon}
+//               alt={`Technology ${index + 1}`}
+//               width={50}
+//               height={50}
+//               className="object-contain"
+//             />
+//           ))}
+//         </div>
+//       </motion.div>
+//     </div>
+//   );
+// };
+
+// export default StragetySection;
+
 "use client";
 
-import { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { useInView } from "react-intersection-observer";
+import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
-import { strategies } from "@/utils/StragetiesData/Strageties";
+import caseStudyData from "@/utils/CaseStudyData/CaseStudyData";
+import { Tilt } from "react-tilt";
+import { motion } from "framer-motion";
 
 const StragetySection = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [isAnimating, setIsAnimating] = useState(false);
+  const [currentCaseStudyIndex, setCurrentCaseStudyIndex] = useState(0);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [hovering, setHovering] = useState(false);
+  const [scrollTriggered, setScrollTriggered] = useState(false);
+  const [interactionTriggered, setInteractionTriggered] = useState(false); // New state for user interaction
+  const lastScrollY = useRef(0);
 
-  const { ref: sectionRef, inView } = useInView({
-    threshold: 0.3,
-    triggerOnce: false,
-  });
-
-  const strategy = strategies[currentIndex];
-  const nextIndex = (currentIndex + 1) % strategies.length;
-  const nextStrategy = strategies[nextIndex];
-
-  const leftHeadingVariants = {
-    hidden: { y: 50, opacity: 0 },
-    visible: {
-      y: 0,
-      opacity: 1,
-      transition: { duration: 1.5, ease: "easeInOut" },
-    },
-    exit: {
-      y: -50,
-      opacity: 0,
-      transition: { duration: 1.2, ease: "easeInOut" },
-    },
-  };
-
-  const imageVariants = {
-    hidden: { y: 0, opacity: 1 },
-    visible: {
-      y: -600,
-      opacity: 1,
-      transition: { duration: 1.5, ease: "easeInOut" },
-    },
-  };
-
-  const rightSectionVariants = {
-    hidden: { x: 50, opacity: 0 },
-    visible: {
-      x: 0,
-      opacity: 1,
-      transition: { duration: 1.5, ease: "easeInOut" },
-    },
-    exit: {
-      x: 100,
-      opacity: 0,
-      transition: { duration: 1.2, ease: "easeInOut" },
-    },
-  };
+  const caseStudy = caseStudyData[currentCaseStudyIndex];
 
   useEffect(() => {
     let interval;
-    if (inView) {
-      setIsAnimating(true);
+    if (hovering && caseStudy.images.length > 1) {
       interval = setInterval(() => {
-        setCurrentIndex((prevIndex) =>
-          prevIndex === strategies.length - 1 ? 0 : prevIndex + 1
+        setCurrentImageIndex(
+          (prevIndex) => (prevIndex + 1) % caseStudy.images.length
         );
-      }, 100000);
+      }, 700);
     } else {
-      setIsAnimating(false);
-      if (interval) clearInterval(interval);
+      clearInterval(interval);
     }
-    return () => {
-      if (interval) clearInterval(interval);
-    };
-  }, [inView]);
+    return () => clearInterval(interval);
+  }, [hovering, caseStudy.images.length]);
 
   useEffect(() => {
-    setIsAnimating(false);
-    setTimeout(() => setIsAnimating(true), 50);
-  }, [currentIndex]);
+    lastScrollY.current = window.scrollY;
+  }, []);
+
+  const handleScroll = (event) => {
+    const currentScrollY = window.scrollY;
+
+    // Trigger animation only if user has interacted with the image
+    if (
+      currentScrollY > lastScrollY.current && // Ensure scrolling down
+      !scrollTriggered && // Prevent multiple triggers
+      interactionTriggered // Check if interaction occurred
+    ) {
+      setScrollTriggered(true);
+      setTimeout(() => {
+        setCurrentCaseStudyIndex(
+          (prevIndex) => (prevIndex + 1) % caseStudyData.length
+        );
+        setCurrentImageIndex(0);
+        setScrollTriggered(false);
+        setInteractionTriggered(false); // Reset interaction trigger
+      }, 800);
+    }
+
+    lastScrollY.current = currentScrollY;
+  };
+
+  const handleInteraction = () => {
+    // Mark that the user interacted with the image
+    setInteractionTriggered(true);
+  };
 
   return (
-    <div ref={sectionRef} className="flex p-8 py-24 relative overflow-hidden">
-      <AnimatePresence mode="wait">
+    <div
+      className="flex flex-col md:flex-row items-center p-8 py-36 relative overflow-hidden"
+      onWheel={handleScroll}
+    >
+      {/* Left Section - Title */}
+      <motion.div
+        className="md:flex-[0.8] lg:flex-[0.5] py-24 px-4 flex items-center justify-center"
+        key={`left-${currentCaseStudyIndex}`}
+      >
+        <p className="font-jakarta px-12 font-extrabold text-6xl text-center md:text-left">
+          {caseStudy.title}
+        </p>
+      </motion.div>
+
+      {/* Middle Section - Image */}
+      <div className="group relative md:flex-[1.8] lg:flex-[2.6] flex items-center justify-center">
+        {/* Front Image */}
         <motion.div
-          key={`heading-${currentIndex}`}
-          className="flex-[0.5] py-24 px-4 flex items-center justify-center"
-          initial="hidden"
-          animate={isAnimating && inView ? "visible" : "hidden"}
-          exit="exit"
-          variants={leftHeadingVariants}
+          initial={{ y: 0 }}
+          animate={
+            scrollTriggered
+              ? { y: -600, opacity: 0, zIndex: 20 }
+              : { y: 0, opacity: 1, zIndex: 20 }
+          }
+          transition={{ duration: 0.4 }}
+          className="absolute w-[200px] h-[200px] md:w-[250px] md:h-[250px] lg:w-[250px] lg:h-[300px] rounded-3xl"
+          key={`image-${currentCaseStudyIndex}`}
         >
-          <p className="font-jakarta px-12 font-extrabold text-4xl">
-            {strategy.name}
-          </p>
+          <Tilt
+            className="relative w-full h-full cursor-pointer"
+            options={{
+              scale: 1.15,
+              max: 80,
+              perspective: 1500,
+              speed: 1000,
+              glare: true,
+              "max-glare": 0.2,
+            }}
+          >
+            <div
+              className="w-full h-full transform transition-transform duration-700 ease-in-out"
+              onMouseEnter={() => {
+                setHovering(true);
+                handleInteraction(); // User interaction via hover
+              }}
+              onMouseLeave={() => setHovering(false)}
+            >
+              <Image
+                src={caseStudy.images[currentImageIndex]}
+                alt={`Case Study Illustration ${currentImageIndex + 1}`}
+                width={500}
+                height={500}
+                className="object-cover w-full h-full rounded-3xl"
+              />
+            </div>
+          </Tilt>
         </motion.div>
-      </AnimatePresence>
 
-      <div className="relative flex-[2.2] bottom-12">
-        <div className="absolute top-0 left-0 z-0">
-          <Image
-            src={nextStrategy.image || "/placeholder.svg"}
-            alt={`${nextStrategy.name} Illustration`}
-            width={300}
-            height={300}
-            className="object-cover w-[400px] h-[400px] rounded-[36px]"
-          />
-        </div>
-
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={`image-${currentIndex}`}
-            className="absolute top-0 left-0 w-full h-full z-10"
-            initial="hidden"
-            animate={isAnimating && inView ? "visible" : "hidden"}
-            exit="exit"
-            variants={imageVariants}
+        {/* Background Image for Next Object */}
+        <div
+          className="absolute w-[200px] h-[200px] md:w-[250px] md:h-[250px] lg:w-[250px] lg:h-[300px] rounded-3xl z-5"
+          key={`bg-image-${(currentCaseStudyIndex + 1) % caseStudyData.length}`}
+        >
+          <Tilt
+            className="relative w-full h-full cursor-pointer"
+            options={{
+              scale: 1.15,
+              max: 80,
+              perspective: 1500,
+              speed: 1000,
+              glare: true,
+              "max-glare": 0.2,
+            }}
           >
             <Image
-              src={strategy.image || "/placeholder.svg"}
-              alt={`${strategy.name} Illustration`}
+              src={
+                caseStudyData[
+                  (currentCaseStudyIndex + 1) % caseStudyData.length
+                ].images[0]
+              }
+              alt="Next Case Study Background"
               width={500}
               height={500}
-              className="object-cover w-[400px] h-[400px] rounded-[36px]"
+              className="object-cover w-full h-full rounded-3xl"
             />
-          </motion.div>
-        </AnimatePresence>
+          </Tilt>
+        </div>
       </div>
 
-      <AnimatePresence mode="wait">
-        <motion.div
-          key={`right-${currentIndex}`}
-          className="flex-[1.5] flex flex-col"
-          initial="hidden"
-          animate={isAnimating && inView ? "visible" : "hidden"}
-          exit="exit"
-          variants={rightSectionVariants}
-        >
-          <p className="font-jakarta text-sm font-normal w-80 mb-4">
-            {strategy.description}
-          </p>
-          <p className="font-jakarta mt-4 text-xl font-semibold mb-4">
-            Technologies Used
-          </p>
-          <div className="flex space-x-6">
-            {strategy.technologiesUsed.map((tech, index) => (
-              <Image
-                key={index}
-                src={tech.logo || "/placeholder.svg"}
-                alt={tech.name}
-                width={50}
-                height={50}
-                className="object-contain"
-              />
-            ))}
-          </div>
-        </motion.div>
-      </AnimatePresence>
+      {/* Right Section - About Project */}
+      <motion.div
+        className="md:flex-[1.3] lg:flex-[1.5] flex flex-col items-center md:items-start"
+        key={`right-${currentCaseStudyIndex}`}
+      >
+        <p className="font-jakarta text-sm font-normal w-full md:w-80 text-center md:text-left mb-4">
+          {caseStudy.aboutProject}
+        </p>
+        <p className="font-jakarta mt-4 text-xl font-semibold mb-4">
+          Technologies Used
+        </p>
+        <div className="flex flex-wrap justify-center md:justify-start space-x-6">
+          {caseStudy.technologyIcons.map((icon, index) => (
+            <Image
+              key={index}
+              src={icon}
+              alt={`Technology ${index + 1}`}
+              width={50}
+              height={50}
+              className="object-contain"
+            />
+          ))}
+        </div>
+      </motion.div>
     </div>
   );
 };

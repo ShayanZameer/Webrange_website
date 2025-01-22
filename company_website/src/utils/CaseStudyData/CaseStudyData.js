@@ -3,9 +3,9 @@ import IMAGES from "@/constants/images";
 const caseStudyData = [
   {
     id: 1,
-    title: "Wokiam",
+    title: "Stragety  Digital 1",
     category: "Web Application",
-    images: [IMAGES.casestudy, IMAGES.casestudy],
+    images: [IMAGES.casestudy, IMAGES.Strategy1, IMAGES.Strategy2],
     aboutProject: `
       We transformed months of design into a matter of weeks, saving the client's budget significantly. Our approach involved upfront design validation and the selection.
     `,
@@ -26,7 +26,7 @@ const caseStudyData = [
 
   {
     id: 2,
-    title: "Wokiam",
+    title: "Stragety Digital 2",
     category: "Web Application",
     images: [IMAGES.casestudy, IMAGES.casestudy],
     aboutProject: `
@@ -44,7 +44,7 @@ const caseStudyData = [
       MongoDB was used for the database to handle large datasets efficiently, while AWS was utilized for hosting and scaling the application.
       Tailwind CSS was used to ensure a responsive and modern design that adapts seamlessly across devices.
     `,
-    technologyIcons: [IMAGES.icons.flutter, IMAGES.icons.flutter],
+    technologyIcons: [IMAGES.icons.c, IMAGES.icons.flutter],
   },
 ];
 
