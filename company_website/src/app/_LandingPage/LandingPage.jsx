@@ -13,7 +13,7 @@ import AnimatedWrapper from "@/components/Animation/AnimatedWrapper";
 
 const LandingPage = () => {
   return (
-    <div>
+    <div className="bg-white">
       <div>
         <VideoSection />
       </div>

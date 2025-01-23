@@ -11,7 +11,7 @@ import AnimatedInput from "./_components/AnimatedInput";
 export default function ContactUs() {
   return (
     <AnimatedPage title="Contact Us">
-      <div className="py-6 px-4 lg:py-10 lg:px-20 ">
+      <div className="py-6 px-4 lg:py-10 lg:px-20 bg-white ">
         <div className="flex justify-end">
           <CloseButton />
         </div>

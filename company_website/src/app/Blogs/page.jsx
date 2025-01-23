@@ -14,7 +14,7 @@ const Blogs = () => {
   return (
     <>
       <AnimatedPage title="Blogs">
-        <div className="py-6 px-4 lg:py-10 lg:px-16 ">
+        <div className="py-6 px-4 lg:py-10 lg:px-16 bg-white ">
           <AnimatedWrapper>
             <div>
               <p className="font-normal text-lg font-jakarta text-center">

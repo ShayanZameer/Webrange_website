@@ -29,7 +29,7 @@ const Page = () => {
   return (
     <>
       {heroImage ? (
-        <div className=" bg-gray-100">
+        <div className=" bg-gray-100 bg-white">
           <div
             className="relative w-full h-[500px] bg-cover bg-center text-white"
             style={{ backgroundImage: `url(${heroImage})` }}
@@ -47,7 +47,7 @@ const Page = () => {
         </div>
       ) : null}
 
-      <div className="py-6 px-4 lg:py-10 lg:px-16">
+      <div className="py-6 px-4 lg:py-10 lg:px-16 bg-white">
         <AnimatedWrapper>
           {/* Main heading section */}
 
@@ -73,7 +73,7 @@ const Page = () => {
         {images.length > 0 && (
           <>
             <AnimatedWrapper>
-              <div className="mt-8">
+              <div className="mt-8 bg-white">
                 <ImageGrid images={images} />
               </div>
             </AnimatedWrapper>
@@ -82,7 +82,7 @@ const Page = () => {
 
         {/* Code sections */}
         <AnimatedWrapper>
-          <div className="mt-8">
+          <div className="mt-8 bg-white">
             {codeSections.map((section, index) => (
               <>
                 <div key={index} className="relative mb-8">
@@ -112,7 +112,7 @@ const Page = () => {
 
         {/* Related blogs section */}
         <AnimatedWrapper>
-          <div className="py-6">
+          <div className="py-6 bg-white">
             <HeaderSection
               text="Related Blogs"
               onClick={() => {
@@ -120,7 +120,7 @@ const Page = () => {
               }}
             />
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 bg-white">
             {blogs.slice(1, 4).map((blog, index) => (
               <BlogCard
                 key={index}

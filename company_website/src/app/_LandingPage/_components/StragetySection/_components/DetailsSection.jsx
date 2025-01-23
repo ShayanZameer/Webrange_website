@@ -2,10 +2,11 @@ import React from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
-const DetailsSection = ({ caseStudy, scrollTriggered }) => {
+const DetailsSection = ({ caseStudy, scrollTriggered, onWheel }) => {
   return (
     <motion.div
-      className="md:flex-[1.3] lg:flex-[1.5] flex flex-col items-center md:items-start"
+      onWheel={onWheel}
+      className="md:flex-[1.3] cursor-pointer lg:flex-[1.5] flex flex-col items-center md:items-start"
       initial={{ x: 0, opacity: 1 }}
       animate={scrollTriggered ? { x: 300, opacity: 0 } : { x: 0, opacity: 1 }}
       transition={{ duration: 0.8, ease: "easeInOut" }}

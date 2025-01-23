@@ -22,7 +22,7 @@ const page = () => {
 
   return (
     <AnimatedPage title="Services">
-      <div>
+      <div className="bg-white">
         <div>
           <Landing
             title="Our services"
