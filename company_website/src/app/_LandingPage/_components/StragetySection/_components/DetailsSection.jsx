@@ -10,7 +10,7 @@ const DetailsSection = ({ caseStudy, scrollTriggered }) => {
       animate={scrollTriggered ? { x: 300, opacity: 0 } : { x: 0, opacity: 1 }}
       transition={{ duration: 0.8, ease: "easeInOut" }}
     >
-      <p className="font-jakarta text-sm md:text-lg font-normal w-full md:w-80 text-center md:text-left mb-4 mt-40 md:mt-44 lg:mt-0">
+      <p className="font-jakarta text-sm md:text-lg lg:text-sm font-normal w-full md:w-80 text-center md:text-left mb-4 mt-40 md:mt-44 lg:mt-0">
         {caseStudy.aboutProject}
       </p>
       <p className="font-jakarta mt-4 text-xl font-semibold mb-4">

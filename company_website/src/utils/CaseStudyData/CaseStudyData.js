@@ -5,7 +5,7 @@ const caseStudyData = [
     id: 1,
     title: "Stragety  Digital 1",
     category: "Web Application",
-    images: [IMAGES.casestudy, IMAGES.Strategy1, IMAGES.Strategy2],
+    images: [IMAGES.casestudy, IMAGES.Strategy1, IMAGES.Strategy2, IMAGES.blog],
     aboutProject: `
       We transformed months of design into a matter of weeks, saving the client's budget significantly. Our approach involved upfront design validation and the selection.
     `,
@@ -28,7 +28,12 @@ const caseStudyData = [
     id: 2,
     title: "Stragety Digital 2",
     category: "Web Application",
-    images: [IMAGES.casestudy, IMAGES.casestudy],
+    images: [
+      IMAGES.casestudy,
+      IMAGES.blogHeadingImage,
+      IMAGES.worldmap,
+      IMAGES.blog,
+    ],
     aboutProject: `
       We transformed months of design into a matter of weeks, saving the client's budget significantly. Our approach involved upfront design validation and the selection.
     `,
