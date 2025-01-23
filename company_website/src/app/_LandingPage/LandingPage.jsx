@@ -26,14 +26,19 @@ const LandingPage = () => {
 
       <div>
         <AnimatedWrapper>
+          <div className="">
+            <h1 className="font-jakarta  text-center text-5xl font-bold  -mb-20 md:-mb-0 py-3">
+              Our Work
+            </h1>
+          </div>
           <StragetySection />
         </AnimatedWrapper>
       </div>
 
       <div>
-        <AnimatedWrapper>
-          <ServicesSection />
-        </AnimatedWrapper>
+        {/* <AnimatedWrapper> */}
+        <ServicesSection />
+        {/* </AnimatedWrapper> */}
       </div>
 
       <div>
