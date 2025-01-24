@@ -15,8 +15,8 @@ const BlogsSection = () => {
         }}
       />
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-4">
-        {blogs.slice(1, 4).map((blog, index) => (
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-6 mt-4 ">
+        {blogs.slice(0, 3).map((blog, index) => (
           <BlogCard
             key={index}
             title={blog.mainHeading[0].title}

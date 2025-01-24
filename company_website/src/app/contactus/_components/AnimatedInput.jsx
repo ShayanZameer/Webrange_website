@@ -1,16 +1,21 @@
 "use client";
 import React, { useState } from "react";
 
-const AnimatedInput = ({ label }) => {
+const AnimatedInput = ({ label, onChange }) => {
   const [inputValue, setInputValue] = useState("");
+
+  const handleInputChange = (e) => {
+    setInputValue(e.target.value);
+    if (onChange) onChange(e);
+  };
 
   return (
     <div className="relative my-5 ">
       <input
         type="text"
-        required
         value={inputValue}
-        onChange={(e) => setInputValue(e.target.value)}
+        onChange={handleInputChange}
+        required
         className="bg-transparent border-0 border-b w-full py-3 text-lg font-semibold border-[#202124] text-black placeholder-transparent focus:outline-none focus:border-black"
         placeholder="Enter text"
       />

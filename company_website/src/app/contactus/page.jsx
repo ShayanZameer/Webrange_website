@@ -1,3 +1,5 @@
+"use client";
+import React, { useState } from "react";
 import AnimatedPage from "@/components/Animation/PageAnimated";
 import CloseButton from "@/components/global/CloseButton";
 import InfoRow from "./_components/InfoRow";
@@ -9,6 +11,40 @@ import SocialLink from "@/components/global/SocialLink";
 import AnimatedInput from "./_components/AnimatedInput";
 
 export default function ContactUs() {
+  // State to collect form data
+  const handleSubmit = () => {
+    setFormData({
+      username: "",
+      email: "",
+      projectDetails: "",
+    });
+  };
+  const [formData, setFormData] = useState({
+    username: "",
+    email: "",
+    projectDetails: "",
+  });
+
+  const handleChange = (label, value) => {
+    setFormData((prev) => ({ ...prev, [label]: value }));
+  };
+
+  const generateMailtoLink = () => {
+    const { username, email, projectDetails } = formData;
+    if (!username || !email || !projectDetails) {
+      return "#";
+    }
+
+    const subject = encodeURIComponent(
+      `Contact Form Submission from ${username}`
+    );
+    const body = encodeURIComponent(
+      `Username: ${username}\nEmail: ${email}\nProject Details: ${projectDetails}`
+    );
+
+    return `mailto:contact@webrangesolutions.com?subject=${subject}&body=${body}`;
+  };
+
   return (
     <AnimatedPage title="Contact Us">
       <div className="py-6 px-4 lg:py-10 lg:px-20 bg-white ">
@@ -57,17 +93,29 @@ export default function ContactUs() {
           </div>
 
           <div className="flex-1 space-y-6">
-            <AnimatedInput label="Username" />
-            <AnimatedInput label="Your email" />
-            <AnimatedInput label="Project Details" />
+            <AnimatedInput
+              label="Username"
+              onChange={(e) => handleChange("username", e.target.value)}
+            />
+            <AnimatedInput
+              label="Your email"
+              onChange={(e) => handleChange("email", e.target.value)}
+            />
+            <AnimatedInput
+              label="Project Details"
+              onChange={(e) => handleChange("projectDetails", e.target.value)}
+            />
 
             <div className="flex justify-center">
-              <button className="bg-black text-white px-6 sm:px-10 lg:px-16 xl:px-32 py-3 text-sm font-semibold rounded-full flex items-center justify-center gap-2 w-full max-w-md">
+              <a
+                href={generateMailtoLink()}
+                className="bg-black text-white px-6 sm:px-10 lg:px-16 xl:px-32 py-3 text-sm font-semibold rounded-full flex items-center justify-center gap-2 w-full max-w-md"
+              >
                 <span className="font-jakarta truncate text-xs md:text-sm">
                   SUBMIT REQUEST
                 </span>
                 <FaArrowRight size={16} />
-              </button>
+              </a>
             </div>
           </div>
         </div>

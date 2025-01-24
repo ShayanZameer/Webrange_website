@@ -49,7 +49,9 @@ const LandingPage = () => {
 
       <div className="p-8">
         <AnimatedWrapper>
-          <BlogsSection />
+          <div className="flex justify-center ">
+            <BlogsSection />
+          </div>
         </AnimatedWrapper>
       </div>
 
