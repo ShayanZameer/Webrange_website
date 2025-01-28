@@ -12,7 +12,7 @@ const ServicesSection = () => {
       content: (
         <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--cyan-500),var(--emerald-500))] flex items-center justify-center text-white">
           <img
-            src={IMAGES.Strategy1}
+            src={IMAGES.erpbasic}
             width={500}
             height={300}
             className="h-full w-full object-cover"
@@ -29,7 +29,7 @@ const ServicesSection = () => {
       content: (
         <div className="h-full w-full flex items-center justify-center text-white">
           <img
-            src={IMAGES.Strategy2}
+            src={IMAGES.dataandaibasic}
             width={500}
             height={300}
             className="h-full w-full object-cover"
@@ -46,7 +46,7 @@ const ServicesSection = () => {
       content: (
         <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--orange-500),var(--yellow-500))] flex items-center justify-center text-white">
           <img
-            src={IMAGES.Strategy1}
+            src={IMAGES.cloudbasic}
             width={500}
             height={300}
             className="h-full w-full object-cover"
@@ -64,7 +64,7 @@ const ServicesSection = () => {
       content: (
         <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--orange-500),var(--yellow-500))] flex items-center justify-center text-white">
           <img
-            src={IMAGES.Strategy2}
+            src={IMAGES.ctbasic}
             width={500}
             height={300}
             className="h-full w-full object-cover"
@@ -82,7 +82,7 @@ const ServicesSection = () => {
       content: (
         <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--orange-500),var(--yellow-500))] flex items-center justify-center text-white">
           <img
-            src={IMAGES.casestudy}
+            src={IMAGES.itbasic}
             width={500}
             height={300}
             className="h-full w-full object-cover"

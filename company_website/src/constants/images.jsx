@@ -10,6 +10,11 @@ const IMAGES = {
   hero1: "/Images/Hero/Hero1.png",
   hero2: "/Images/Hero/Hero2.png",
   blogHeadingImage: "/Images/Blog/BlogHeadingImage.png",
+  cloudbasic: "/Images/Service/cloudbasic.png",
+  ctbasic: "/Images/Service/ctbasic.png",
+  dataandaibasic: "/Images/Service/dataandaibasic.png",
+  erpbasic: "/Images/Service/erpbasic.png",
+  itbasic: "/Images/Service/itbasic.png",
 
   icons: {
     flutter: "/Images/icons/flutter.png",
