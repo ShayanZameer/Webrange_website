@@ -62,14 +62,17 @@ const VideoSection = () => {
         <div className="flex flex-col items-center justify-center lg:flex-row lg:justify-between px-4 sm:px-6 lg:px-12 h-full">
           <div className="max-w-lg text-center lg:text-left">
             <h1 className="text-4xl sm:text-5xl lg:text-7xl font-jakarta font-bold whitespace-nowrap">
-              WE REIMAGINE
+              INNOVATE
             </h1>
             <h1 className="text-4xl sm:text-5xl lg:text-7xl font-jakarta font-bold whitespace-nowrap">
-              TOMORROW
+              ACCELERATE
+            </h1>
+            <h1 className="text-4xl sm:text-5xl lg:text-7xl font-jakarta font-bold whitespace-nowrap">
+              AND DOMINATE
             </h1>
             <p className="mt-2 text-sm sm:text-base lg:text-lg leading-relaxed font-jakarta">
-              Driving growth and molding the future through transformative
-              change
+              We engineer custom software designed to meet your unique
+              challenges and drive impactful results.
             </p>
             <div className="flex justify-center lg:justify-start">
               <button

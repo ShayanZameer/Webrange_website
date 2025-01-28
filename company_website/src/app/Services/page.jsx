@@ -26,7 +26,7 @@ const page = () => {
         <div>
           <Landing
             title="Our services"
-            subtitle="We transform business requirements into high-level App."
+            subtitle="Revolutionizing your business with tailored, future-ready digital solutions."
             buttonText="Explore All"
             imageSrc={IMAGES.about}
             onClick={handleExploreAllClick}

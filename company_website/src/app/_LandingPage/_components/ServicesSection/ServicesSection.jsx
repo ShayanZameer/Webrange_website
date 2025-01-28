@@ -5,10 +5,10 @@ import IMAGES from "@/constants/images";
 const ServicesSection = () => {
   const content = [
     {
-      icon: "./Images/icons/emoji3.png",
+      icon: IMAGES.icons.erp,
       title: "ERP Solutions",
       description:
-        "Simplifying your business processes, one solution at a time.",
+        " Streamline operations, enhance productivity, and achieve more with solutions built to fit your unique business needs.",
       content: (
         <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--cyan-500),var(--emerald-500))] flex items-center justify-center text-white">
           <img
@@ -22,9 +22,10 @@ const ServicesSection = () => {
       ),
     },
     {
-      icon: "./Images/icons/emoji3.png",
+      icon: IMAGES.icons.dataandai,
       title: "Data & AI",
-      description: "Turning data into decisions with intelligent insights.",
+      description:
+        " Transform raw data into powerful insights that drive smarter strategies and fuel your business growth.",
       content: (
         <div className="h-full w-full flex items-center justify-center text-white">
           <img
@@ -38,10 +39,10 @@ const ServicesSection = () => {
       ),
     },
     {
-      icon: "./Images/icons/emoji3.png",
-      title: "Cloud",
+      icon: IMAGES.icons.clouud,
+      title: "Cloud Solutions",
       description:
-        "Effortless scaling and seamless integration for your digital journey.",
+        " Unlock limitless potential with scalable, secure, and accessible cloud technologies designed for modern businesses.",
       content: (
         <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--orange-500),var(--yellow-500))] flex items-center justify-center text-white">
           <img
@@ -56,10 +57,10 @@ const ServicesSection = () => {
     },
 
     {
-      icon: "./Images/icons/emoji3.png",
-      title: "Cloud",
+      icon: IMAGES.icons.customsolution,
+      title: "Cybersecurity Services",
       description:
-        "Effortless scaling and seamless integration for your digital journey.",
+        " Stay ahead of evolving threats with robust, proactive security tailored to protect your digital assets.",
       content: (
         <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--orange-500),var(--yellow-500))] flex items-center justify-center text-white">
           <img
@@ -74,10 +75,10 @@ const ServicesSection = () => {
     },
 
     {
-      icon: "./Images/icons/emoji3.png",
-      title: "Cloud",
+      icon: IMAGES.icons.business,
+      title: "IT Infrastructure",
       description:
-        "Effortless scaling and seamless integration for your digital journey.",
+        "Empower your business with reliable, future-proof systems that adapt to your ever-changing needs.",
       content: (
         <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--orange-500),var(--yellow-500))] flex items-center justify-center text-white">
           <img

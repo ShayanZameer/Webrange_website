@@ -12,14 +12,16 @@ const SuperPower = () => {
 
       {/* Main Heading */}
       <h1 className="mt-2 text-3xl md:text-5xl font-bold font-jakarta text-black leading-tight max-w-2xl">
-        We just doing what
+        We Deliver what
         <br /> others don't
       </h1>
 
       {/* Description */}
       <p className="mt-4 text-sm font-jakarta  max-w-md">
-        We prioritize robust UX structuring before wireframing and validate our
-        hypotheses with real.
+        Our team stands out for its ability to bridge strategy, technology, and
+        design seamlessly. We prioritize structured development, ensuring every
+        hypothesis is validated with real-world data to achieve unmatched
+        precision and performance.
       </p>
 
       <button

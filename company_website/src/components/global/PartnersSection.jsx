@@ -54,7 +54,7 @@ const PartnersSection = () => {
         <p className="text-center font-bold font-jakarta text-xl sm:text-2xl mb-6 sm:mb-8">
           Our Partners
         </p>
-        <div className="overflow-hidden w-[400px] md:w-[600px] lg:w-[800px] mx-auto">
+        <div className="overflow-hidden w-[350px] md:w-[600px] lg:w-[800px] mx-auto">
           <Marquee
             gradient={false}
             speed={40}

@@ -1,5 +1,6 @@
 import HeadingWithIcon from "./_components/HeadingWithIcon";
-import { BsGraphUp } from "react-icons/bs";
+// import { BsGraphUp } from "react-icons/bs";
+import { Sparkle, Swords, ChartSpline, Bolt } from "lucide-react";
 
 const FocusSection = () => {
   return (
@@ -13,31 +14,31 @@ const FocusSection = () => {
           Our Focus
         </p>
         <p className="font-jakarta text-sm sm:text-base lg:text-lg overflow-hidden">
-          Take a moment to familiarize yourself with our mindset. These are the
-          guiding principles and insights about us that provide a deeper
-          understanding of our identity.
+          Take a moment to explore the principles that guide our approach. These
+          pillars represent our unwavering commitment to excellence and
+          innovation.
         </p>
       </div>
       <div className="flex-1 py-4 px-4 sm:px-6 lg:px-8">
         {" "}
         <div className="flex flex-col lg:flex-row">
           {" "}
-          <div className="flex-1 mb-4 lg:mb-0">
+          <div className="flex-1 mb-4 lg:mb-0  border-r border-b">
             {" "}
             <HeadingWithIcon
-              heading="We help our clients generate revenue"
-              Icon={BsGraphUp}
-              description="In our design approach, we prioritize the primary business needs and goals. Recognizing that profitability is fundamental to every project, we aim to deliver solutions that contribute to our clients' financial success."
-              border="border-b border-r"
+              heading="Driving Business Growth"
+              Icon={ChartSpline}
+              description="We design and develop software solutions that align with your core business objectives. By focusing on profitability and user-centricity, we ensure your success in a competitive landscape."
             />
           </div>
-          <div className="flex-1 mb-4 lg:mb-0">
+          <div className="flex-1 mb-4 lg:mb-0 border-b">
             {" "}
             <HeadingWithIcon
-              heading="We help our clients generate revenue"
-              Icon={BsGraphUp}
-              description="In our design approach, we prioritize the primary business needs and goals. Recognizing that profitability is fundamental to every project, we aim to deliver solutions that contribute to our clients' financial success."
-              border="border-b"
+              heading="Solving Complex Challenges
+"
+              Icon={Swords}
+              description="Our methodology revolves around simplifying the intricate. We tackle each project with a systematic approach, ensuring that even the most complex problems are met with efficient, user-friendly solutions."
+              border=""
             />
           </div>
         </div>
@@ -46,18 +47,18 @@ const FocusSection = () => {
           <div className="flex-1 mb-4 lg:mb-0">
             {" "}
             <HeadingWithIcon
-              heading="We help our clients generate revenue"
-              Icon={BsGraphUp}
-              description="In our design approach, we prioritize the primary business needs and goals. Recognizing that profitability is fundamental to every project, we aim to deliver solutions that contribute to our clients' financial success."
+              heading="Elevating User Experience"
+              Icon={Bolt}
+              description="Through a blend of creativity and data-driven insights, we create software that resonates with end-users, fostering engagement and loyalty."
               border="border-r"
             />
           </div>
           <div className="flex-1">
             {" "}
             <HeadingWithIcon
-              heading="We help our clients generate revenue"
-              Icon={BsGraphUp}
-              description="In our design approach, we prioritize the primary business needs and goals. Recognizing that profitability is fundamental to every project, we aim to deliver solutions that contribute to our clients' financial success."
+              heading="Achieving Tangible Results"
+              Icon={Sparkle}
+              description="Our strategies are built for impact. By combining innovative thinking with cutting-edge technology, we deliver solutions that drive measurable results for your business."
               border=""
             />
           </div>

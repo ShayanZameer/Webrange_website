@@ -11,14 +11,7 @@ import SocialLink from "@/components/global/SocialLink";
 import AnimatedInput from "./_components/AnimatedInput";
 
 export default function ContactUs() {
-  // State to collect form data
-  const handleSubmit = () => {
-    setFormData({
-      username: "",
-      email: "",
-      projectDetails: "",
-    });
-  };
+
   const [formData, setFormData] = useState({
     username: "",
     email: "",

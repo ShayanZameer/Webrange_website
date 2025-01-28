@@ -5,11 +5,11 @@ const HeadingWithIcon = ({ heading, Icon, description, border }) => {
         border || ""
       }`}
     >
-      <div className="flex justify-between items-center w-full">
+      <div className="flex justify-between items-center w-full gap-x-8">
         <p className="text-lg font-semibold font-jakarta leading-6">
           {heading}
         </p>
-        {Icon && <Icon className="text-2xl mb-4 font-semibold" />}
+        {Icon && <Icon className="text-2xl font-semibold self-center" />}
       </div>
       <p className="mt-2 text-[#202124] text-sm font-light font-jakarta">
         {description}

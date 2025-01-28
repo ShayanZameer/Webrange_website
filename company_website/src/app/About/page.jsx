@@ -54,7 +54,7 @@ export default function About() {
         <div>
           <Landing
             title="Who we are"
-            subtitle="We are a remote design team with strong experience in creating UX/UI solutions"
+            subtitle="With 35+ years' expertise, we craft reliable and secure software solutions."
             description="Creating meaningful digital experiences."
             buttonText="Explore All"
             onClick={handleExploreAllClick}
