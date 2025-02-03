@@ -62,13 +62,13 @@ const StragetySection = () => {
   return (
     <>
       <div
-        onWheel={handleScroll}
+        // onWheel={handleScroll}
         className="flex flex-col  lg:flex-row items-center p-8 py-24 relative overflow-hidden"
       >
         <TitleSection
           caseStudy={caseStudy}
           scrollTriggered={scrollTriggered}
-          onWheel={handleScroll}
+          // onWheel={handleScroll}
         />
 
         {/* Middle Section - Image */}
@@ -147,7 +147,7 @@ const StragetySection = () => {
         <DetailsSection
           caseStudy={caseStudy}
           scrollTriggered={scrollTriggered}
-          onWheel={handleScroll}
+          // onWheel={handleScroll}
         />
       </div>
 

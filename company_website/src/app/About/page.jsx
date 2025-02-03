@@ -12,30 +12,75 @@ import { useRef } from "react";
 import Worldmap from "@/components/global/Worldmap";
 import AnimatedWrapper from "@/components/Animation/AnimatedWrapper";
 
-const profileData = {
-  profileImage: IMAGES.profile,
-  yearsOfExperience: 10,
-  name: "Saim Rehdari",
-  title: "CEO",
-  description:
-    "Founder and lead designer at UXIS, specializes in deep UX/UI design for complex product interfaces. Achieving an 88% success rate in planned KPIs after redesigns.",
-  additionalInfo:
-    'The author of the course "UX Thinking and Structuring Before Creating UI" and the winner of the Telegram competition for redesigning the Android app.',
-  expertise: [
-    "Finance",
-    "Graphics",
-    "Design",
-    "Cloud Platform",
-    "Testing",
-    "AI Chats",
-    "Big Data",
-  ],
-  socialLinks: [
-    { href: "https://linkedin.com", icon: <FaLinkedin size={24} /> },
-    { href: "https://instagram.com", icon: <FaInstagram size={24} /> },
-    { href: "https://facebook.com", icon: <FaFacebook size={24} /> },
-  ],
-};
+const profileData = [
+  {
+    profileImage: IMAGES.saim,
+    yearsOfExperience: 5,
+    name: "Saim Rahdari",
+    title: "CEO",
+    description:
+      "Saim Rahdari, Founder & CEO of Webrange Solutions—where innovation knows no bounds. Our mission is to empower businesses and individuals with cutting-edge software solutions that streamline operations and enhance productivity.",
+    additionalInfo:
+      "At Webrange Solutions, we are committed to exceptional customer service and seamless user experiences. We strive to create an innovative environment that simplifies daily tasks and drives business success.",
+    expertise: [
+      "Finance",
+      "Graphics",
+      "Design",
+      "Cloud Platform",
+      "Testing",
+      "AI Chats",
+      "Big Data",
+    ],
+    socialLinks: [
+      {
+        href: "https://www.linkedin.com/in/saim-rahdari/",
+        icon: <FaLinkedin size={24} />,
+      },
+      {
+        href: "https://www.instagram.com/saim_rahdari/",
+        icon: <FaInstagram size={24} />,
+      },
+      {
+        href: "https://www.facebook.com/share/15hrbshFVv/",
+        icon: <FaFacebook size={24} />,
+      },
+    ],
+  },
+
+  {
+    profileImage: IMAGES.bilal,
+    yearsOfExperience: 5,
+    name: "Bilal Anwar",
+    title: "CTO",
+    description:
+      "Co-Founder of Webrange Solutions with over five years of experience in building and managing teams for web & mobile apps, DApps, ERPs, CRMs, and enterprise solutions. I specialize in project ideation, execution, and team management, delivering top-tier results for over 50 small businesses.",
+    additionalInfo:
+      "As a startup leader, I’ve led recruitment, managed teams efficiently, and overseen projects from concept to completion. Passionate about seamless user experiences, I’m always eager to collaborate and drive innovation in the tech space. Let's connect and build something great!",
+    expertise: [
+      "Finance",
+      "Graphics",
+      "Design",
+      "Cloud Platform",
+      "Testing",
+      "AI Chats",
+      "Big Data",
+    ],
+    socialLinks: [
+      {
+        href: "https://www.linkedin.com/in/bilal-webrange/",
+        icon: <FaLinkedin size={24} />,
+      },
+      {
+        href: "https://www.instagram.com/bilal_anwarr/",
+        icon: <FaInstagram size={24} />,
+      },
+      {
+        href: "https://www.facebook.com/share/1D8pivae9m/",
+        icon: <FaFacebook size={24} />,
+      },
+    ],
+  },
+];
 export default function About() {
   const servicesSectionRef = useRef(null);
 
@@ -64,13 +109,15 @@ export default function About() {
 
         {/* <AnimatedWrapper> */}
         <div ref={servicesSectionRef} className="flex justify-center px-12">
-          <div className="grid grid-cols-1 lg:grid-cols-2">
-            <div className="  lg:border-r lg:border-black">
-              <ProfileCard {...profileData} />
-            </div>
-            <div>
-              <ProfileCard {...profileData} />
-            </div>
+          <div className="grid grid-cols-1 lg:grid-cols-2 ">
+            {profileData.map((profile, index) => (
+              <div
+                key={index}
+                className="flex justify-center  border lg:border-black"
+              >
+                <ProfileCard {...profile} />
+              </div>
+            ))}
           </div>
         </div>
         {/* </AnimatedWrapper> */}

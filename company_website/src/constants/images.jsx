@@ -15,7 +15,11 @@ const IMAGES = {
   dataandaibasic: "/Images/Service/dataandaibasic.png",
   erpbasic: "/Images/Service/erpbasic.png",
   itbasic: "/Images/Service/itbasic.png",
-
+  saim: "/Images/About/Saim.png",
+  bilal: "/Images/About/Bilal.png",
+  swapit: "/Images/CaseStudy/swapit.png",
+  clupapp: "/Images/CaseStudy/Clubapp.png",
+  vupop: "/Images/CaseStudy/vupop.jpg",
   icons: {
     flutter: "/Images/icons/flutter.png",
     dart: "/Images/icons/Dart.png",
@@ -54,6 +58,12 @@ const IMAGES = {
     clouud: "/Images/icons/cloud.png",
     customsolution: "/Images/icons/customsolution.png",
     dataandai: "/Images/icons/dataandAi.png",
+    ibm: "/Images/icons/ibm.png",
+    salesforce: "/Images/icons/salesforce.png",
+    microsoft365: "/Images/icons/Microsoft365.png",
+    awspartner: "/Images/icons/awspartner.webp",
+    mongodb: "/Images/icons/mongodb.png",
+    aws: "/Images/icons/aws.png",
   },
 };
 

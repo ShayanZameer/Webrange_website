@@ -12,13 +12,15 @@ const ProfileCard = ({
   socialLinks,
 }) => {
   return (
-    <div className=" p-6 border-t lg:border-b border-black ">
+    <div className=" p-6  border-black ">
       <div className="flex flex-col md:flex-row md:space-x-12 items-center md:items-start">
         <div className="relative w-52 h-52 md:w-[250px] md:h-60 overflow-hidden flex-shrink-0">
           <Image
             src={profileImage}
             alt={name}
-            layout="fill"
+            layout="intrinsic"
+            width={500}
+            height={500}
             objectFit="cover"
             className=""
           />
