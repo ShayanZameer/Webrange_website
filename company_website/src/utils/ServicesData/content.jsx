@@ -1,58 +1,69 @@
 export const content = [
   {
     id: "01",
-    title: "Mobile App Development",
+    title: "ERP Solutions",
     items: [
       {
-        name: "Front-End",
+        name: "Customization & Integration",
         description:
-          " Delivering engaging user interfaces with cutting-edge frameworks like React Native and Flutter.",
+          "Tailoring ERP systems to business needs with seamless third-party integrations. Simplifying enterprise operations.",
       },
       {
-        name: "Back-End",
+        name: "Process Automation",
         description:
-          "Building scalable, secure infrastructures with Node.js, Python, and cloud integration.",
+          "Streamlining workflows with AI-driven automation for improved efficiency. Reducing manual intervention.",
       },
       {
-        name: "Authentication & Sync",
+        name: "Scalability & Performance",
         description:
-          " Ensuring secure logins, real-time sync, and seamless offline functionality.",
+          "Designing ERP solutions that grow with your business while maintaining high performance. Supporting future expansion.",
       },
       {
-        name: "Performance Optimization",
+        name: "Security & Compliance",
         description:
-          "Enhancing speed, efficiency, and usability for peak app performance.",
+          "Ensuring data protection and regulatory compliance for business operations. Safeguarding sensitive information.",
       },
       {
-        name: "Testing & Maintenance",
+        name: "Support & Maintenance",
         description:
-          " Providing continuous support, debugging, and updates for flawless operation.",
+          "Providing continuous updates, troubleshooting, and enhancements for smooth operation. Ensuring uptime and reliability.",
       },
     ],
   },
   {
     id: "02",
-    title: "Web Development",
+    title: "Data & AI",
     items: [
       {
-        name: "Front-End",
+        name: "Data Analytics & Insights",
         description:
-          " Designing sleek, responsive web interfaces using React, Next.js, and modern technologies.",
+          "Leveraging big data to drive actionable business decisions and strategies. Extracting meaningful patterns.",
       },
       {
-        name: "Back-End",
+        name: "AI & Machine Learning",
         description:
-          " Creating robust server-side architectures for a seamless user experience.",
+          "Developing intelligent systems for automation, prediction, and optimization. Enhancing decision-making processes.",
       },
       {
-        name: "Full-Stack Integration",
+        name: "Data Engineering",
         description:
-          "Blending front-end and back-end for a unified, intuitive web solution.",
+          "Building robust data pipelines, warehouses, and real-time processing frameworks. Ensuring data flow integrity.",
       },
       {
-        name: "Performance Optimization",
+        name: "AI-Powered Automation",
         description:
-          " Boosting web speed and efficiency with lazy loading and advanced caching.",
+          "Enhancing operational efficiency with AI-driven automation and decision-making. Automating repetitive tasks.",
+      },
+      {
+        name: "Security & Governance",
+        description:
+          "Ensuring data privacy, compliance, and secure AI model deployment. Protecting AI systems from vulnerabilities.",
+      },
+      {
+        name: "Chatbots",
+        description:
+          "Building intelligent chatbot systems to streamline customer service and improve engagement. Enhancing user experience.",
+        highlighted: true,
       },
     ],
   },
@@ -61,24 +72,91 @@ export const content = [
     title: "Cloud Solutions",
     items: [
       {
-        name: "Cloud Architecture",
+        name: "Cloud Architecture & Migration",
         description:
-          " Crafting scalable, resilient, and tailored cloud frameworks to empower growth.",
+          "Designing, optimizing, and migrating workloads to scalable cloud platforms. Ensuring seamless transition.",
       },
       {
-        name: "Serverless Computing",
+        name: "Multi-Cloud & Hybrid Solutions",
         description:
-          "Simplifying scalability and reducing costs with next-gen serverless technologies.",
+          "Implementing cloud strategies across AWS, Azure, and Google Cloud for flexibility. Maximizing uptime and scalability.",
       },
       {
-        name: "Cloud Migration",
+        name: "DevOps & Automation",
         description:
-          "Streamlining your transition to the cloud for seamless operations.",
+          "Streamlining CI/CD, infrastructure as code, and automated cloud deployments. Boosting development efficiency.",
       },
       {
-        name: "DevOps & CI/CD",
+        name: "Security & Compliance",
         description:
-          " Optimizing workflows with automated pipelines and modern DevOps strategies.",
+          "Ensuring cloud security, compliance, and data protection best practices. Protecting data across platforms.",
+      },
+      {
+        name: "Cloud Cost Optimization",
+        description:
+          "Reducing cloud expenses with efficient resource management and scaling strategies. Maximizing ROI.",
+      },
+    ],
+  },
+  {
+    id: "04",
+    title: "Software Development",
+    items: [
+      {
+        name: "Custom Software Development",
+        description:
+          "Building tailored software solutions that align with business objectives. Optimizing digital transformations.",
+      },
+      {
+        name: "Web & Mobile Development",
+        description:
+          "Creating high-performance web and mobile applications with modern frameworks. Ensuring cross-platform compatibility.",
+      },
+      {
+        name: "API Development & Integration",
+        description:
+          "Developing secure and scalable APIs for seamless third-party connectivity. Enhancing software interoperability.",
+      },
+      {
+        name: "UI/UX Design",
+        description:
+          "Crafting intuitive and engaging user experiences for digital products. Focusing on usability and design aesthetics.",
+      },
+      {
+        name: "Testing & Maintenance",
+        description:
+          "Providing continuous support, debugging, and updates for long-term success. Ensuring product stability.",
+      },
+    ],
+  },
+  {
+    id: "05",
+    title: "IT Infrastructure",
+    items: [
+      {
+        name: "Network & Security",
+        description:
+          "Ensuring secure and scalable IT infrastructure with robust cybersecurity measures. Safeguarding against cyber threats.",
+      },
+      {
+        name: "Server & Storage Solutions",
+        description:
+          "Deploying high-performance servers and scalable storage for enterprise needs. Maximizing uptime and accessibility.",
+      },
+      {
+        name: "Virtualization & Cloud Computing",
+        description:
+          "Optimizing IT environments with virtualized and cloud-based solutions. Reducing hardware dependency.",
+      },
+      {
+        name: "IT Support & Management",
+        description:
+          "Providing proactive monitoring, maintenance, and technical support. Ensuring operational efficiency.",
+      },
+      {
+        name: "Disaster Recovery & Backup",
+        description:
+          "Implementing fail-safe disaster recovery and data backup strategies. Protecting data against loss.",
       },
     ],
   },

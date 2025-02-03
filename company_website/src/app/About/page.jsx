@@ -22,15 +22,16 @@ const profileData = [
       "Saim Rahdari, Founder & CEO of Webrange Solutions—where innovation knows no bounds. Our mission is to empower businesses and individuals with cutting-edge software solutions that streamline operations and enhance productivity.",
     additionalInfo:
       "At Webrange Solutions, we are committed to exceptional customer service and seamless user experiences. We strive to create an innovative environment that simplifies daily tasks and drives business success.",
+
     expertise: [
-      "Finance",
-      "Graphics",
-      "Design",
-      "Cloud Platform",
-      "Testing",
-      "AI Chats",
-      "Big Data",
+      "Business Growth Strategy",
+      "AI & Digital Innovation",
+      "IT Consulting & Solutions",
+      "Enterprise Cloud & Software",
+      "Startup & Product Scaling",
+      "Leadership & Innovation",
     ],
+
     socialLinks: [
       {
         href: "https://www.linkedin.com/in/saim-rahdari/",
@@ -57,13 +58,11 @@ const profileData = [
     additionalInfo:
       "As a startup leader, I’ve led recruitment, managed teams efficiently, and overseen projects from concept to completion. Passionate about seamless user experiences, I’m always eager to collaborate and drive innovation in the tech space. Let's connect and build something great!",
     expertise: [
-      "Finance",
-      "Graphics",
-      "Design",
-      "Cloud Platform",
-      "Testing",
-      "AI Chats",
-      "Big Data",
+      "Tech Strategy",
+      "Software Engineering",
+      "Cloud Solutions",
+      "AI & Automation",
+      "Innovation Leadership",
     ],
     socialLinks: [
       {

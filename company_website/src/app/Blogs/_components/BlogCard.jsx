@@ -12,7 +12,7 @@ const BlogCard = ({
     <div className="max-w-sm overflow-hidden">
       <div className="relative ">
         <Image
-          src={cardImage}
+          src={cardImage || "/images/placeholder.png"}
           alt={title}
           className="w-full h-48 rounded-t-2xl"
           width={500}

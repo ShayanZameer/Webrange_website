@@ -58,9 +58,9 @@ const ServicesSection = () => {
 
     {
       icon: IMAGES.icons.customsolution,
-      title: "Cybersecurity Services",
+      title: "Software Development",
       description:
-        " Stay ahead of evolving threats with robust, proactive security tailored to protect your digital assets.",
+        " Designing and building scalable, high-performance software solutions tailored to business needs.",
       content: (
         <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--orange-500),var(--yellow-500))] flex items-center justify-center text-white">
           <img

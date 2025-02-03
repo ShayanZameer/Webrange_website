@@ -40,7 +40,7 @@ const Blogs = () => {
                 title={blog.mainHeading[0].title}
                 writtenBy={blog.writtenBy}
                 writtenDate={blog.writtenDate}
-                cardImage={blog.images[0]}
+                cardImage={blog.heroImage}
                 description={blog.mainHeading[0].paragraphs[0]}
                 onClick={() => {
                   router.push(

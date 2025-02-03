@@ -20,6 +20,25 @@ const IMAGES = {
   swapit: "/Images/CaseStudy/swapit.png",
   clupapp: "/Images/CaseStudy/Clubapp.png",
   vupop: "/Images/CaseStudy/vupop.jpg",
+  wodpro: "/Images/CaseStudy/wodpro.jpg",
+  starstudent: "/Images/CaseStudy/startstudent.jpg",
+
+  secureapi: "/Images/Blog/secureapi.png",
+  firebaseflutter: "/Images/Blog/firebaseflutter.jpg",
+  authentication: "/Images/Blog/authentication.jpg",
+
+  CaseStudy: {
+    vupop1: "/Images/CaseStudy/pictures/vupop1.png",
+    vupop2: "/Images/CaseStudy/pictures/vupop2.png",
+    wodpro1: "/Images/CaseStudy/pictures/wodpro1.png",
+    wodpro2: "/Images/CaseStudy/pictures/wodpro2.png",
+    starstudent1: "/Images/CaseStudy/pictures/starstudent1.png",
+    starstudent2: "/Images/CaseStudy/pictures/starstudent2.png",
+    club1: "/Images/CaseStudy/pictures/club1.png",
+    club2: "/Images/CaseStudy/pictures/club2.png",
+    club3: "/Images/CaseStudy/pictures/club3.png",
+    swap1: "/Images/CaseStudy/pictures/swap1.png",
+  },
   icons: {
     flutter: "/Images/icons/flutter.png",
     dart: "/Images/icons/Dart.png",

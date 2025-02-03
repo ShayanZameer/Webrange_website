@@ -116,13 +116,13 @@ const CaseStudyDetails = () => {
             </div>
           </div>
           <div className=" py-4">
-            {images.slice(0, 1).map((src, index) => (
+            {images.slice(1).map((src, index) => (
               <div
                 key={index}
                 className="flex flex-wrap gap-3 justify-center mt-8"
               >
                 <Image
-                  src={images[0]}
+                  src={src}
                   alt="images"
                   width={1300}
                   height={500}
