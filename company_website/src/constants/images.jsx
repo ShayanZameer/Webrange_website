@@ -19,7 +19,7 @@ const IMAGES = {
   bilal: "/Images/About/Bilal.png",
   swapit: "/Images/CaseStudy/swapit.png",
   clupapp: "/Images/CaseStudy/Clubapp.png",
-  vupop: "/Images/CaseStudy/vupop.jpg",
+  vupop: "/Images/CaseStudy/vupop.png",
   wodpro: "/Images/CaseStudy/wodpro.jpg",
   starstudent: "/Images/CaseStudy/startstudent.jpg",
 

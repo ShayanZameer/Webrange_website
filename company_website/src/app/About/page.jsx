@@ -98,7 +98,7 @@ export default function About() {
         <div>
           <Landing
             title="Who we are"
-            subtitle="With 35+ years' expertise, we craft reliable and secure software solutions."
+            subtitle="With 5+ year's expertise, we craft reliable and secure software solutions."
             description="Creating meaningful digital experiences."
             buttonText="Explore All"
             onClick={handleExploreAllClick}
