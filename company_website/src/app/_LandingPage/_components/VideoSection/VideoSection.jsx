@@ -1,5 +1,12 @@
 "use client";
-import { FaInstagram, FaTwitter, FaTimes } from "react-icons/fa";
+import {
+  FaInstagram,
+  FaTwitter,
+  FaTimes,
+  FaFacebook,
+  FaFacebookF,
+  FaLinkedinIn,
+} from "react-icons/fa";
 import IMAGES from "@/constants/images";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
@@ -53,9 +60,16 @@ const VideoSection = () => {
           </div>
 
           <div className="hidden lg:flex items-center gap-3 sm:gap-4 text-[#FFFFFF80]">
-            <FaInstagram className="text-base sm:text-lg cursor-pointer hover:text-gray-400" />
-            <FaTwitter className="text-base sm:text-lg cursor-pointer hover:text-gray-400" />
-            <FaTimes className="text-base sm:text-lg cursor-pointer hover:text-gray-400" />
+            <a href="https://www.instagram.com/webrangesolutions/">
+              <FaInstagram className="text-base sm:text-lg cursor-pointer hover:scale-150 hover:text-gray-400" />
+            </a>
+            <a href="https://www.facebook.com/webrangesolutions">
+              <FaFacebookF className="text-base sm:text-lg cursor-pointer hover:scale-150 hover:text-gray-400" />
+            </a>
+
+            <a href="https://www.linkedin.com/company/webrange-solutions/posts/?feedView=all">
+              <FaLinkedinIn className="text-base sm:text-lg cursor-pointer hover:scale-150 hover:text-gray-400" />
+            </a>
           </div>
         </div>
 
