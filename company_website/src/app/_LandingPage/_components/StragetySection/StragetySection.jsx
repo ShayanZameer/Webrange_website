@@ -21,17 +21,17 @@ const StragetySection = () => {
 
   useEffect(() => {
     let interval;
-    if (hovering && caseStudy.images.length > 1) {
+    if (hovering && caseStudy.CardImages.length > 1) {
       interval = setInterval(() => {
         setCurrentImageIndex(
-          (prevIndex) => (prevIndex + 1) % caseStudy.images.length
+          (prevIndex) => (prevIndex + 1) % caseStudy.CardImages.length
         );
       }, 700);
     } else {
       clearInterval(interval);
     }
     return () => clearInterval(interval);
-  }, [hovering, caseStudy.images.length]);
+  }, [hovering, caseStudy.CardImages.length]);
 
   const handleScroll = () => {
     handleInteraction();
@@ -102,7 +102,7 @@ const StragetySection = () => {
             >
               <div className="w-full h-full transform transition-transform duration-700 ease-in-out">
                 <Image
-                  src={caseStudy.images[currentImageIndex]}
+                  src={caseStudy?.CardImages[currentImageIndex]}
                   alt={`Case Study Illustration ${currentImageIndex + 1}`}
                   width={500}
                   height={500}
@@ -133,7 +133,7 @@ const StragetySection = () => {
                 src={
                   caseStudyData[
                     (currentCaseStudyIndex + 1) % caseStudyData.length
-                  ].images[0]
+                  ].CardImages[0]
                 }
                 alt="Next Case Study Background"
                 width={500}

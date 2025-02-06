@@ -27,6 +27,21 @@ const IMAGES = {
   firebaseflutter: "/Images/Blog/firebaseflutter.jpg",
   authentication: "/Images/Blog/authentication.jpg",
 
+  CardImages: {
+    vupopcard1: "/Images/cardimages/vupopcard1.png",
+    vupopcard2: "/Images/cardimages/vupopcard2.png",
+    vupopcard3: "/Images/cardimages/vupopcard3.png",
+    clubhubcard1: "/Images/cardimages/clubhubcard1.png",
+    clubhubcard2: "/Images/cardimages/clubhubcard2.png",
+    starstudentcard1: "/Images/cardimages/starstudentcard1.png",
+    starstudentcard2: "/Images/cardimages/starstudentcard2.png",
+    wodprocard1: "/Images/cardimages/wodprocard1.png",
+    wodprocard2: "/Images/cardimages/wodprocard2.png",
+    swapitcard1: "/Images/cardimages/swapit1.png",
+    swapitcard2: "/Images/cardimages/swapit2.png",
+    swapitcard3: "/Images/cardimages/swapit3.png",
+  },
+
   CaseStudy: {
     vupop1: "/Images/CaseStudy/pictures/vupop1.png",
     vupop2: "/Images/CaseStudy/pictures/vupop2.png",

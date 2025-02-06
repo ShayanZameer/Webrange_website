@@ -1,4 +1,5 @@
 import IMAGES from "@/constants/images";
+import { Car } from "lucide-react";
 
 const caseStudyData = [
   {
@@ -6,6 +7,10 @@ const caseStudyData = [
     title: "ClubHub",
     category: "Mobile Application",
     images: [IMAGES.clupapp, IMAGES.CaseStudy.club1, IMAGES.CaseStudy.club3],
+    CardImages: [
+      IMAGES.CardImages.clubhubcard1,
+      IMAGES.CardImages.clubhubcard2,
+    ],
     aboutProject:
       "Club Hub 365 simplifies communication, fee collection,RSVPs for training, and announcements for sports clubs.It supports administrators, coaches, players, and parents by integrating essential features into one platform. Users can join clubs, register for teams, and manage subscriptions easily.",
 
@@ -44,6 +49,11 @@ vibrant community of over 8,000 clubs.
     title: "SwapIt",
     category: "Mobile Application",
     images: [IMAGES.swapit, IMAGES.CaseStudy.swap1, IMAGES.CaseStudy.club2],
+    CardImages: [
+      IMAGES.CardImages.swapitcard1,
+      IMAGES.CardImages.swapitcard2,
+      IMAGES.CardImages.swapitcard3,
+    ],
     aboutProject:
       "Welcome to Swap It! Easily trade your items with others through our fun and simple platform. Snap a picture, upload your items, and start receiving swap proposals.Enjoy effortless exchanges!",
 
@@ -83,6 +93,11 @@ vibrant community of over 15,000 users.
     title: "Vupop",
     category: "Mobile Application",
     images: [IMAGES.vupop, IMAGES.CaseStudy.vupop1, IMAGES.CaseStudy.vupop2],
+    CardImages: [
+      IMAGES.CardImages.vupopcard1,
+      IMAGES.CardImages.vupopcard2,
+      IMAGES.CardImages.vupopcard3,
+    ],
     aboutProject:
       "VuPop is a social media platform designed for sports fans, broadcasters, and clubs. It enables real-time engagement, integrates social content into broadcasts, and rewards fans for their participation.",
 
@@ -112,6 +127,10 @@ VuPop creates a seamless platform where broadcasters can utilize social content 
       IMAGES.CaseStudy.starstudent1,
       IMAGES.CaseStudy.starstudent2,
     ],
+    CardImages: [
+      IMAGES.CardImages.starstudentcard1,
+      IMAGES.CardImages.starstudentcard2,
+    ],
     aboutProject:
       "Star Student is an innovative app designed to connect university and college students with local household job opportunities. It provides an affordable solution for the general public and small businesses to find reliable student workers for tasks such as cleaning, gardening, and dog walking. ",
 
@@ -137,6 +156,7 @@ Star Student provides an intuitive interface with distinct sections for employer
     title: "Wod Pro",
     category: "Web and Mobile Application",
     images: [IMAGES.wodpro, IMAGES.CaseStudy.wodpro1, IMAGES.CaseStudy.wodpro2],
+    CardImages: [IMAGES.CardImages.wodprocard1, IMAGES.CardImages.wodprocard2],
     aboutProject:
       "WodPro is a fitness app that allows users to record and upload workout videos, track progress, and compete in rankings based on categories. Admins verify user performance to ensure accurate ranking. ",
 
